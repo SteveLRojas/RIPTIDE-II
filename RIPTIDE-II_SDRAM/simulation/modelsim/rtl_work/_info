@@ -1,0 +1,733 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/RIPTIDE-II_SDRAM/simulation/modelsim
+vALU
+Z1 !s110 1617857936
+!i10b 1
+!s100 FVVY09Y_k`dVmV]]Wez>f1
+IR::jU>Cd]g2S><9SeFJGY1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1609721466
+8D:/RIPTIDE-II_SDRAM/ALU.v
+FD:/RIPTIDE-II_SDRAM/ALU.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1617857936.000000
+!s107 D:/RIPTIDE-II_SDRAM/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/ALU.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/RIPTIDE-II_SDRAM
+Z7 tCvgOpt 0
+n@a@l@u
+vcall_stack
+Z8 !s110 1617857937
+!i10b 1
+!s100 HQYZSO4;RlQ:X^@@WBRN=2
+IM;0I0ooh4UeNb^@:TI>UU3
+R2
+R0
+Z9 w1609718802
+Z10 8D:/RIPTIDE-II_SDRAM/internal_mem.v
+Z11 FD:/RIPTIDE-II_SDRAM/internal_mem.v
+L0 17
+R3
+r1
+!s85 0
+31
+Z12 !s108 1617857937.000000
+Z13 !s107 D:/RIPTIDE-II_SDRAM/internal_mem.v|
+Z14 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/internal_mem.v|
+!i113 1
+R5
+R6
+R7
+vCHR_ROM
+R1
+!i10b 1
+!s100 6Ndb4Y<34]SHaQI@lA<zQ2
+ITUV3J7l4icTEi]2E89<aZ2
+R2
+R0
+w1617425339
+8D:/RIPTIDE-II_SDRAM/CHR_ROM.v
+FD:/RIPTIDE-II_SDRAM/CHR_ROM.v
+Z15 L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/RIPTIDE-II_SDRAM/CHR_ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/CHR_ROM.v|
+!i113 1
+R5
+R6
+R7
+n@c@h@r_@r@o@m
+vd_cache
+R1
+!i10b 1
+!s100 <]jhFfh5jZ0KTQ>aZTV`52
+I>c;m<W5d5E35mJJgAD4L]0
+R2
+R0
+w1617857786
+8D:/RIPTIDE-II_SDRAM/d_cache.v
+FD:/RIPTIDE-II_SDRAM/d_cache.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/RIPTIDE-II_SDRAM/d_cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/d_cache.v|
+!i113 1
+R5
+R6
+R7
+vdecode_unit
+R1
+!i10b 1
+!s100 _P]Nd_3<fe[PAAPH:>CG02
+I:eo[6[YGW2aYMG<426GGk3
+R2
+R0
+w1611635470
+8D:/RIPTIDE-II_SDRAM/decode_unit.v
+FD:/RIPTIDE-II_SDRAM/decode_unit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/RIPTIDE-II_SDRAM/decode_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/decode_unit.v|
+!i113 1
+R5
+R6
+R7
+vframe_clk
+Z16 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z17 !s110 1617857935
+!i10b 1
+!s100 8VH]bI;1jMjJU<f^nV@iF2
+ISgf]dVnSFSm7Q?l;YfMk62
+R2
+Z18 !s105 MULTIPLEXED_HEX_DRIVER_sv_unit
+S1
+R0
+Z19 w1041521722
+Z20 8D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv
+Z21 FD:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv
+L0 56
+R3
+r1
+!s85 0
+31
+Z22 !s108 1617857935.000000
+Z23 !s107 D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv|
+Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv|
+!i113 1
+Z25 o-sv -work work
+Z26 !s92 -sv -work work +incdir+D:/RIPTIDE-II_SDRAM
+R7
+vhazard_unit
+R8
+!i10b 1
+!s100 1fAmhzJ?Dl`Q<64mT=?VD1
+IWG]k`2Ai`C2Uii:5lZ9l22
+R2
+R0
+w1614034760
+8D:/RIPTIDE-II_SDRAM/hazard_unit.v
+FD:/RIPTIDE-II_SDRAM/hazard_unit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/RIPTIDE-II_SDRAM/hazard_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/hazard_unit.v|
+!i113 1
+R5
+R6
+R7
+vhexdriver
+R16
+R17
+!i10b 1
+!s100 XSAaKkQCJ^m<HCh0bW8JB0
+Ikie[dE4J8:VaoB=[3ngUz3
+R2
+R18
+S1
+R0
+R19
+R20
+R21
+L0 30
+R3
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R25
+R26
+R7
+vmask_unit
+R8
+!i10b 1
+!s100 ejJ]lc:MVbf60ZABKGUK<2
+IjiDc[??RF4bYkG@cL`=Mg2
+R2
+R0
+w1609720100
+8D:/RIPTIDE-II_SDRAM/mask_unit.v
+FD:/RIPTIDE-II_SDRAM/mask_unit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 D:/RIPTIDE-II_SDRAM/mask_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/mask_unit.v|
+!i113 1
+R5
+R6
+R7
+vMC6847_gen3
+R16
+R8
+!i10b 1
+!s100 gIlaTe]4_<hie?6IE6]7`2
+IIG6hVD>V3jH^?;DfY>]8d2
+R2
+!s105 MC6847_gen3_sv_unit
+S1
+R0
+w1617427388
+8D:/RIPTIDE-II_SDRAM/MC6847_gen3.sv
+FD:/RIPTIDE-II_SDRAM/MC6847_gen3.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 D:/RIPTIDE-II_SDRAM/MC6847_gen3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/MC6847_gen3.sv|
+!i113 1
+R25
+R26
+R7
+n@m@c6847_gen3
+vMSC
+R8
+!i10b 1
+!s100 [Lf^ozYdn1l]iMBcNPYfZ1
+I3L6A:2ZkgiJ764[WCb2LA2
+R2
+R0
+w1617424013
+8D:/RIPTIDE-II_SDRAM/MSC.v
+FD:/RIPTIDE-II_SDRAM/MSC.v
+L0 2
+R3
+r1
+!s85 0
+31
+R12
+!s107 D:/RIPTIDE-II_SDRAM/MSC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/MSC.v|
+!i113 1
+R5
+R6
+R7
+n@m@s@c
+vMULTIPLEXED_HEX_DRIVER
+R16
+R17
+!i10b 1
+!s100 d[ZkM:>>mPBd:G?OogT]R1
+IVT62fB3UF`ISkMKVZIJid1
+R2
+R18
+S1
+R0
+R19
+R20
+R21
+L0 1
+R3
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 1
+R25
+R26
+R7
+n@m@u@l@t@i@p@l@e@x@e@d_@h@e@x_@d@r@i@v@e@r
+vp_cache
+R8
+!i10b 1
+!s100 3nV8=U3eV9VZgd^iFKRmC0
+I17a7D8o>[AKX9B<=IcWG[3
+R2
+R0
+w1617847054
+8D:/RIPTIDE-II_SDRAM/p_cache.v
+FD:/RIPTIDE-II_SDRAM/p_cache.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 D:/RIPTIDE-II_SDRAM/p_cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/p_cache.v|
+!i113 1
+R5
+R6
+R7
+vp_mem
+Z27 !s110 1617857938
+!i10b 1
+!s100 eif35XgXc6<n1nYOK]fV50
+IGT5znf[FMm3[4UX[GzLY=3
+R2
+R0
+w1617836156
+8D:/RIPTIDE-II_SDRAM/p_mem.v
+FD:/RIPTIDE-II_SDRAM/p_mem.v
+R15
+R3
+r1
+!s85 0
+31
+R12
+!s107 D:/RIPTIDE-II_SDRAM/p_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/p_mem.v|
+!i113 1
+R5
+R6
+R7
+vPC
+R27
+!i10b 1
+!s100 ?XG0bonh:j:zSF6[9aM0J3
+IT5]nPkD=NQi=mi4W;W2zN2
+R2
+R0
+w1611809784
+8D:/RIPTIDE-II_SDRAM/PC.v
+FD:/RIPTIDE-II_SDRAM/PC.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z28 !s108 1617857938.000000
+!s107 D:/RIPTIDE-II_SDRAM/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/PC.v|
+!i113 1
+R5
+R6
+R7
+n@p@c
+vPLL0
+R27
+!i10b 1
+!s100 G<aY3aOSoTQ3J`lek;BD[2
+IajGLg`QFk]b@im@PlHe_O3
+R2
+R0
+w1617426307
+8D:/RIPTIDE-II_SDRAM/PLL0.v
+FD:/RIPTIDE-II_SDRAM/PLL0.v
+R15
+R3
+r1
+!s85 0
+31
+R28
+!s107 D:/RIPTIDE-II_SDRAM/PLL0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/PLL0.v|
+!i113 1
+R5
+R6
+R7
+n@p@l@l0
+vPLL0_altpll
+R17
+!i10b 1
+!s100 oXaa`1FoBg7l_;23o4fHE3
+I?CFS7X^53Sm1:N[`?dfd22
+R2
+R0
+w1617426906
+8D:/RIPTIDE-II_SDRAM/db/pll0_altpll.v
+FD:/RIPTIDE-II_SDRAM/db/pll0_altpll.v
+L0 29
+R3
+r1
+!s85 0
+31
+R22
+!s107 D:/RIPTIDE-II_SDRAM/db/pll0_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM/db|D:/RIPTIDE-II_SDRAM/db/pll0_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/RIPTIDE-II_SDRAM/db
+R7
+n@p@l@l0_altpll
+vPRG_ROM
+R27
+!i10b 1
+!s100 888PUmOU8mT3V;kA3VSmC2
+IGK8nfoF>ol2:nmFb^;kSD0
+R2
+R0
+w1617423293
+8D:/RIPTIDE-II_SDRAM/PRG_ROM.v
+FD:/RIPTIDE-II_SDRAM/PRG_ROM.v
+R15
+R3
+r1
+!s85 0
+31
+R28
+!s107 D:/RIPTIDE-II_SDRAM/PRG_ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/PRG_ROM.v|
+!i113 1
+R5
+R6
+R7
+n@p@r@g_@r@o@m
+vPVP
+Z29 !s110 1617857939
+!i10b 1
+!s100 ?VM5jf6N<mmF;n?:h:VQc2
+IIe<adnEnQQCmc7QeVMN2?0
+R2
+R0
+w1617847409
+8D:/RIPTIDE-II_SDRAM/toplevel.v
+FD:/RIPTIDE-II_SDRAM/toplevel.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z30 !s108 1617857939.000000
+!s107 D:/RIPTIDE-II_SDRAM/toplevel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/toplevel.v|
+!i113 1
+R5
+R6
+R7
+n@p@v@p
+vreg_file
+R8
+!i10b 1
+!s100 Pgc2>L4T]FGG[2]N5<zNH1
+Ii>b8D[VRmVC<8Y]J4fNU13
+R2
+R0
+R9
+R10
+R11
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R5
+R6
+R7
+vright_rotate
+R27
+!i10b 1
+!s100 >CcMK?b;kGLICbK6Xh2ok0
+INUVc22VYc3eo@SeZgZSg93
+R2
+R0
+w1609719786
+8D:/RIPTIDE-II_SDRAM/right_rotate.v
+FD:/RIPTIDE-II_SDRAM/right_rotate.v
+L0 1
+R3
+r1
+!s85 0
+31
+R28
+!s107 D:/RIPTIDE-II_SDRAM/right_rotate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/right_rotate.v|
+!i113 1
+R5
+R6
+R7
+vRIPTIDE_II
+R27
+!i10b 1
+!s100 elJKQKi<U_l8j4Pz?m:l73
+IWY^zl]7Ye7:_13AO8=^Hi1
+R2
+R0
+w1614034838
+8D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v
+FD:/RIPTIDE-II_SDRAM/RIPTIDE_II.v
+L0 1
+R3
+r1
+!s85 0
+31
+R28
+!s107 D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v|
+!i113 1
+R5
+R6
+R7
+n@r@i@p@t@i@d@e_@i@i
+vsdr
+R16
+R27
+!i10b 1
+!s100 z=T@91B0_NznhzXUgCUk[2
+I`z9oJQS?0hTL0;KebS=[I3
+R2
+!s105 sdr_sv_unit
+S1
+R0
+w1602656320
+8D:/RIPTIDE-II_SDRAM/sdr.sv
+FD:/RIPTIDE-II_SDRAM/sdr.sv
+Z31 FD:/RIPTIDE-II_SDRAM/sdr_parameters.sv
+L0 48
+R3
+r1
+!s85 0
+31
+R28
+!s107 D:/RIPTIDE-II_SDRAM/sdr_parameters.sv|D:/RIPTIDE-II_SDRAM/sdr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/sdr.sv|
+!i113 1
+R25
+R26
+R7
+Xsdr_parameters_sv_unit
+R16
+R27
+!i10b 1
+!s100 =?aUWWIAg53@0PUM7T;X?2
+Id_@LkHaQmmdTCL]Q@@_Re0
+Vd_@LkHaQmmdTCL]Q@@_Re0
+!i103 1
+S1
+R0
+w1602655578
+8D:/RIPTIDE-II_SDRAM/sdr_parameters.sv
+R31
+L0 80
+R3
+r1
+!s85 0
+31
+R28
+!s107 D:/RIPTIDE-II_SDRAM/sdr_parameters.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/sdr_parameters.sv|
+!i113 1
+R25
+R26
+R7
+vSDRAM_DP64_I
+R29
+!i10b 1
+!s100 Zn`7a[Kkz^EGH:m237X:A0
+IXHZVRz22O_?98BM2E9IXX1
+R2
+R0
+w1617675170
+8D:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v
+FD:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v
+L0 1
+R3
+r1
+!s85 0
+31
+R30
+!s107 D:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v|
+!i113 1
+R5
+R6
+R7
+n@s@d@r@a@m_@d@p64_@i
+vserial
+R16
+R29
+!i10b 1
+!s100 6S3k^[0Me^o<7S@d7fJMg3
+I7?CM7n]aW:Nn?Bhj8T36T3
+R2
+!s105 serial_sv_unit
+S1
+R0
+w1612566544
+8D:/RIPTIDE-II_SDRAM/serial.sv
+FD:/RIPTIDE-II_SDRAM/serial.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R30
+!s107 D:/RIPTIDE-II_SDRAM/serial.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/serial.sv|
+!i113 1
+R25
+R26
+R7
+vshift_merge
+R29
+!i10b 1
+!s100 ?9H48>giN7NgNXFA`hedU2
+IYJS<Le4>3E9ODJQ9e@VBP1
+R2
+R0
+w1610149538
+8D:/RIPTIDE-II_SDRAM/shift_merge.v
+FD:/RIPTIDE-II_SDRAM/shift_merge.v
+L0 1
+R3
+r1
+!s85 0
+31
+R30
+!s107 D:/RIPTIDE-II_SDRAM/shift_merge.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/shift_merge.v|
+!i113 1
+R5
+R6
+R7
+vTestbench
+R29
+!i10b 1
+!s100 G8W2bUAfRS<Z1z>TLom^92
+IK<R<XFLZSl4JH>_Pe3OdK3
+R2
+R0
+w1617667273
+8D:/RIPTIDE-II_SDRAM/testbench.v
+FD:/RIPTIDE-II_SDRAM/testbench.v
+L0 2
+R3
+r1
+!s85 0
+31
+R30
+!s107 D:/RIPTIDE-II_SDRAM/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/testbench.v|
+!i113 1
+R5
+R6
+R7
+n@testbench
+vUART
+R16
+R29
+!i10b 1
+!s100 >LgUdl:P8PCE04Gaz[E[R0
+I0@Pj?^Meeh[[Z:JoCLZh:2
+R2
+!s105 UART_sv_unit
+S1
+R0
+w1617830675
+8D:/RIPTIDE-II_SDRAM/UART.sv
+FD:/RIPTIDE-II_SDRAM/UART.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R30
+!s107 D:/RIPTIDE-II_SDRAM/UART.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/UART.sv|
+!i113 1
+R25
+R26
+R7
+n@u@a@r@t
+vVGA
+Z32 !s110 1617857940
+!i10b 1
+!s100 d1RHLLi`E?]3BLUfKhj8C3
+IL82bSgVFfnfAHFe96Eec<2
+R2
+R0
+w1617426985
+8D:/RIPTIDE-II_SDRAM/VGA.v
+FD:/RIPTIDE-II_SDRAM/VGA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R30
+!s107 D:/RIPTIDE-II_SDRAM/VGA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/VGA.v|
+!i113 1
+R5
+R6
+R7
+n@v@g@a
+vVGA_RAM
+R32
+!i10b 1
+!s100 cNfM_6Dd69=<DEe`1J6[m2
+IWS:HnZN6SQcT^:;Z]Qg5`3
+R2
+R0
+w1617424363
+8D:/RIPTIDE-II_SDRAM/VGA_RAM.v
+FD:/RIPTIDE-II_SDRAM/VGA_RAM.v
+R15
+R3
+r1
+!s85 0
+31
+!s108 1617857940.000000
+!s107 D:/RIPTIDE-II_SDRAM/VGA_RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/RIPTIDE-II_SDRAM|D:/RIPTIDE-II_SDRAM/VGA_RAM.v|
+!i113 1
+R5
+R6
+R7
+n@v@g@a_@r@a@m

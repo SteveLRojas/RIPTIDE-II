@@ -1,0 +1,140 @@
+`timescale 10ns/1ns
+module Testbench();
+
+//External signals
+reg clk;
+reg n_reset;
+reg[3:0] button;
+wire[4:0] LED;
+reg RXD;
+wire TXD;
+
+//CPU external signals
+wire[15:0] PRG_address;
+wire[15:0] PRG_data;
+wire[15:0] CPU_data_address;
+wire IO_WC;
+wire IO_RC;
+
+//CPU internal signals
+wire[15:0] data_address;
+//wire[15:0] data_address_hold;
+wire[15:0] I_reg;
+wire[15:0] I_alternate;
+wire[2:0] REGF_A_ADDRESS;
+wire[2:0] REGF_W_ADDRESS;
+wire REGF_WREN;
+wire[7:0] REGF_W_DATA;
+wire[7:0] REGF_A_DATA;
+wire[7:0] REGF_B_DATA;
+wire NZT;
+wire XEC;
+wire JMP;
+wire CALL;
+wire RET;
+wire hazard;
+wire aux_hazard;
+wire latch_hazard;
+wire regf_hazard;
+wire IO_hazard;
+wire pipeline_flush;
+wire decoder_RST;
+wire[7:0] amux_out;
+wire[7:0] alu_out;
+wire OVF;
+wire[2:0] shift_L4;
+wire[2:0] merge_D05;
+wire[2:0] stack_addr;
+
+//cache controller signals
+wire p_cache_miss;
+wire d_cache_miss;
+wire p1_req;
+wire p1_ready;
+wire p2_req;
+wire p2_ready;
+
+PVP PVP_inst(
+		.reset(n_reset),
+		.clk(clk),
+		.button(button[3:0]),
+		.RXD(RXD),
+		.TXD(TXD),
+		.LED(LED[4:0]),
+		.DDFH(),	//serial data from host to CPU data output
+		.DDTH(),	//serial data from CPU data input to host
+		.DAFH(),	//serial data from host to CPU data address output
+		.DWFH(),	//write enable from host to IO_WC (edge triggered)
+		.DDW_latch(),	//controls data flow from host to dta output registers
+		.DDR_latch(),	//loads shift register with data to be sent to the host
+		.DAW_latch(),	//data address write latch
+		.PDTH(),	//program data to host
+		.PAFH(),	//program address from host
+		.PAW_latch(),	//program address write latch
+		.PDR_latch(),	//program data read latch
+		.host_clk(),		//serial clock from host
+		.LB_w_sel(),		//select left bank for writing (from host)
+		.LB_r_sel()		//select left bank for reading (from host)
+		);
+		
+assign PRG_address = PVP_inst.PRG_address;
+assign PRG_data = PVP_inst.PRG_data;
+assign CPU_data_address = PVP_inst.data_address;
+assign IO_WC = PVP_inst.IO_WC;
+assign IO_RC = PVP_inst.IO_RC;
+assign data_address = PVP_inst.CPU_inst.address;
+//assign data_address_hold = PVP_inst.CPU_inst.data_address_hold;
+assign I_reg = PVP_inst.CPU_inst.decode_unit0.I_reg;
+assign I_alternate = PVP_inst.CPU_inst.decode_unit0.I_alternate;
+assign REGF_A_ADDRESS = PVP_inst.CPU_inst.reg_file0.a_address;
+assign REGF_W_ADDRESS = PVP_inst.CPU_inst.reg_file0.w_address;
+assign REGF_WREN = PVP_inst.CPU_inst.reg_file0.wren;
+assign REGF_W_DATA = PVP_inst.CPU_inst.reg_file0.w_data;
+assign REGF_A_DATA = PVP_inst.CPU_inst.reg_file0.a_data;
+assign REGF_B_DATA = PVP_inst.CPU_inst.reg_file0.b_data;
+assign NZT = PVP_inst.CPU_inst.NZT;
+assign XEC = PVP_inst.CPU_inst.XEC;
+assign JMP = PVP_inst.CPU_inst.JMP;
+assign CALL = PVP_inst.CPU_inst.CALL;
+assign RET = PVP_inst.CPU_inst.RET;
+assign hazard = PVP_inst.CPU_inst.hazard;
+assign aux_hazard = PVP_inst.CPU_inst.hazard_unit0.aux_hazard;
+assign latch_hazard = PVP_inst.CPU_inst.hazard_unit0.latch_hazard;
+assign regf_hazard = PVP_inst.CPU_inst.hazard_unit0.regf_hazard;
+assign IO_hazard = PVP_inst.CPU_inst.hazard_unit0.IO_hazard;
+assign pipeline_flush = PVP_inst.CPU_inst.pipeline_flush;
+assign decoder_RST = PVP_inst.CPU_inst.decoder_RST;
+assign amux_out = PVP_inst.CPU_inst.amux_out;
+assign alu_out = PVP_inst.CPU_inst.alu_out;
+assign OVF = PVP_inst.CPU_inst.OVF;
+assign merge_D05 = PVP_inst.CPU_inst.merge_D05;
+assign shift_L4 = PVP_inst.CPU_inst.shift_L4;
+assign stack_addr = PVP_inst.CPU_inst.PC0.cstack0.address;
+
+assign p_cache_miss = PVP_inst.p_cache_miss;
+assign d_cache_miss = PVP_inst.d_cache_miss;
+assign p1_req = PVP_inst.p1_req;
+assign p1_ready = PVP_inst.p1_ready;
+assign p2_req = PVP_inst.p2_req;
+assign p2_ready = PVP_inst.p2_ready;
+
+always begin: CLOCK_GENERATION
+#1 clk =  ~clk;
+end
+
+initial begin: CLOCK_INITIALIZATION
+	clk = 0;
+end
+
+initial begin: TEST_VECTORS
+//initial conditions
+n_reset = 1'b0;
+button = 4'b1110;
+RXD = 1'b1;
+
+#20 n_reset = 1'b1;	//release reset
+#20 button = 4'b1111;	//release halt
+//#1000 n_reset = 1'b0;
+//#20 n_reset = 1'b1;
+end
+endmodule

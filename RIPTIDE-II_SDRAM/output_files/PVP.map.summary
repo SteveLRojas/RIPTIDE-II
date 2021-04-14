@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Apr 10 20:30:46 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : PVP
+Top-level Entity Name : PVP
+Family : Cyclone IV E
+Total logic elements : 2,265
+    Total combinational functions : 1,695
+    Dedicated logic registers : 1,278
+Total registers : 1278
+Total pins : 66
+Total virtual pins : 0
+Total memory bits : 177,218
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

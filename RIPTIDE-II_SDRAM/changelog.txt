@@ -1,0 +1,133 @@
+Revision 1:
+Created new Quartus project (version 10.0)
+Modified data interface.
+Removed unused registers.
+Found possible bug in 8X-300 and 8X-RIPTIDE.
+	IO_n_LB_r is driven by n_LB_r6. It should be driven by n_LB_r.
+Integrated IO_latch into shift_merge.
+Implemented p_cache_miss input.
+Implemented d_cache_miss input.
+Created validation platform with serial module.
+Wrote test program for CPU.
+	All tests passed.
+Created testbench for simulation.
+Created data cache.
+Created program cache.
+Created testbench for simulating caches.
+Modified assembler program to generate MIF files directly.
+Switched to using 16-bit program ROM initialized from MIF file.
+Created SRAM controller for testing caches.
+Added initialization port to SRAM controller.
+
+Revision 2:
+updated Quartus version to 13.0
+Created cache memory model for simulation.
+Fixed bugs in both cache controllers.
+Fixed bug in SRAM controller.
+All cache test ran successfully.
+
+Revision 3:
+Fixed the d_cache_miss input.
+Connected cache controllers to CPU on top level.
+Updated whole system testbench.
+Fixed bug in PC module (address undefined at startup).
+Fixed bug in decode unit (rotate source and rotate mux undefined at startup).
+Fixed possible bug in decode unit (latch_wren_reg undefined after reset).
+
+NOTE: fmax is limited by paths from cache memories to PC and data address output. It is not possible to add interrupts without further lowering the fmax or making major changes to the memory sytem and PC module.
+	Interrupts will not be implemented in the RIPTIDE-II processor.
+
+The PFGA board I was using for this project has multiple pins that are not working, at least one is needed for this design.
+The project will be moved to a new board. Due to the SRAM requirements I may need to design a custom board.
+
+Revision 4:
+Created new project in Vivado 2019.1.
+Created top_level_wrapper with PLL and button mapping.
+Created SRAM_controller_internal module.
+	This is a memory controller designed to drive block RAM in Xilinx FPGAs.
+Created SRAM_internal. This is a 64KB BRAM.
+Created a new PRG_ROM module.
+Modified assembler to create COE files for Vivado.
+Created new p_mem module.
+Fixed bug in PC module. The p_cache_miss input is now edge triggered.
+Fixed bug in PC module. The PC_I_field register chain was moved to the RIPTIDE_II module and is now controlled by the data_hazard signal.
+Fixed bug in hazard unit: IO_hazard_write_miss should depend on WC_reg6, not WC_reg7.
+Removed unnecessary logic from RIPTIDE_II module.
+
+Revision 5:
+Copied changes from RIPTIDE-II Rev 5 project.
+	Modified d_cache mem_req logic in preparation for implementing cache flush.
+		Main memory requests are delayed by one cycle (only during flush and reset) so that valid tag data can be read before the request.
+	Implemented flush input in d_cache.
+	Created MSC module and file.
+	Instantiated MSC in top_level.
+	Added logic in d_cache to ignore the CPU address when it is not valid.
+	Modified the serial module to prevent false triggering by adding a read enable input.
+	Modified the d_cache module so that cache flush does not reset the cache. If a reset is desired it can be triggered manually through the MSC.
+Fixed bug in d_cache that caused the cached controller to crash in some cases when reading and writing simultaneously.
+The following code can be used to trigger the bug:
+
+LONG_JUMP
+	XMIT $FF, IVL
+	XMIT $FC, IVR
+	XMIT $0B, LIV3, 4
+	XMIT $0F, LIV7, 4	;SET LEDs
+
+	XMIT $FF, IVL
+	XMIT $FF, IVR
+	XMIT $0A, RIV3, 4
+	XMIT $0F, RIV7, 4
+	XMIT $FE, IVR
+	XMIT $00, RIV7, 8	;CREATE RET INSTRUCTION AT ADDRESS $7FFF IN PROGRAM SPACE ($FFFF AND FFFE IN DATA SPACE)
+	XMIT $0F, IVL
+	MOVE RIV7, 8, AUX	;CAUSE CACHE MISS TO MOVE NOP TO MAIN MEMORY
+	XMIT $7F, AUX		;SET PAGE REGISTER TO $7F
+	CALL $FF	;CALL ADDRESS $7FFF
+	
+	XMIT $FF, IVL
+	XMIT $FC, IVR
+	XMIT $0D, LIV3, 4
+	XMIT $0F, LIV7, 4	;TURN ON LEDs
+	JMP XEC_IV_TEST
+
+Found bug: No hazard detection for OVF register. OVF is written in stage 3, but read in stage 1.
+A forwarding path through the ALU and mask unit can eliminate the need for some of this hazard detection.
+These forwarding paths could be used for all registers to achieve a significant performance gain.
+
+Added hazard detection for OVF reads.
+
+Revision 6:
+Added MC6847_gen3 display controller to project.
+Changed address width of MC6847 to 12 bits.
+Created CHR_ROM and memory config file.
+Created VGA_RAM.
+Created VGA module.
+Modified PLL settings to get a 25MHz clock instead of 24MHz.
+Instantiated VGA module in top_level.
+Removed serial CPU module.
+Removed unused files from project.
+
+TODO:
+	Implement SDRAM controller. (Will do on a different board because this one has DDR SDRAM)
+	Look into using forwarding paths for register file and OVF (Will need to duplicate some logic).
+	Implement HDMI video output.
+
+Revision 7:
+Created new Quartus 18.1 project.
+Copied files from Rev 6. BRAM modules will have to be replaced.
+Created SDRAM_DP64_I SDRAM controller module. The interface is slightly different than the SRAM controller.
+Created new p_mem module.
+Created new PRG_ROM module.
+Added bits to page registers in MSC module.
+Copied 3-bit MC6847_gen3 module.
+Created new CHR_ROM module.
+Created PLL module and new clocks.
+Changed mem_req logic in p_cache.
+Modified UART for 50MHz.
+NOTE: p_mem must be configured to output new data when reading during write. If old data is output the cache controllers will not work.
+Fixed bug in d_cache (flush was not working).
+Added hex display outputs.
+All tests ran successfully in hardware, but simulation fails because SDRAM model contains xx at startup.
+
+Revision 8:
+Added logic to MSC so that it does not reset or flush the caches while a memory operation is in progress.

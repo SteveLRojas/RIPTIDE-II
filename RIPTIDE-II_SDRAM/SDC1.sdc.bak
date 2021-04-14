@@ -1,0 +1,6 @@
+create_clock -period 20.0 [get_ports clk]
+derive_pll_clocks
+set_input_delay -clock clk -max 0.3 [all_inputs]
+set_input_delay -clock clk -min 0.2 [all_inputs]
+set_output_delay -clock clk -max -2.7 [all_outputs]
+set_output_delay -clock clk -min -2.9 [all_outputs]

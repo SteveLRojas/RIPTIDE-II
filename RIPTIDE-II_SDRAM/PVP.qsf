@@ -1,0 +1,205 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 19:34:46  March 27, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		PVP_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY PVP
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:34:46  MARCH 27, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_84 -to LED[3]
+set_location_assignment PIN_85 -to LED[2]
+set_location_assignment PIN_86 -to LED[1]
+set_location_assignment PIN_87 -to LED[0]
+set_location_assignment PIN_88 -to button[3]
+set_location_assignment PIN_89 -to button[2]
+set_location_assignment PIN_90 -to button[1]
+set_location_assignment PIN_91 -to button[0]
+set_location_assignment PIN_104 -to B
+set_location_assignment PIN_105 -to G
+set_location_assignment PIN_101 -to HSYNC
+set_location_assignment PIN_106 -to R
+set_location_assignment PIN_103 -to VSYNC
+set_location_assignment PIN_23 -to clk
+set_location_assignment PIN_25 -to reset
+set_location_assignment PIN_59 -to sdram_a[11]
+set_location_assignment PIN_75 -to sdram_a[10]
+set_location_assignment PIN_60 -to sdram_a[9]
+set_location_assignment PIN_64 -to sdram_a[8]
+set_location_assignment PIN_65 -to sdram_a[7]
+set_location_assignment PIN_66 -to sdram_a[6]
+set_location_assignment PIN_67 -to sdram_a[5]
+set_location_assignment PIN_68 -to sdram_a[4]
+set_location_assignment PIN_83 -to sdram_a[3]
+set_location_assignment PIN_80 -to sdram_a[2]
+set_location_assignment PIN_77 -to sdram_a[1]
+set_location_assignment PIN_76 -to sdram_a[0]
+set_location_assignment PIN_74 -to sdram_ba[1]
+set_location_assignment PIN_73 -to sdram_ba[0]
+set_location_assignment PIN_70 -to sdram_cas_n
+set_location_assignment PIN_58 -to sdram_cke
+set_location_assignment PIN_43 -to sdram_clk
+set_location_assignment PIN_72 -to sdram_cs_n
+set_location_assignment PIN_44 -to sdram_dq[15]
+set_location_assignment PIN_46 -to sdram_dq[14]
+set_location_assignment PIN_49 -to sdram_dq[13]
+set_location_assignment PIN_50 -to sdram_dq[12]
+set_location_assignment PIN_51 -to sdram_dq[11]
+set_location_assignment PIN_52 -to sdram_dq[10]
+set_location_assignment PIN_53 -to sdram_dq[9]
+set_location_assignment PIN_54 -to sdram_dq[8]
+set_location_assignment PIN_39 -to sdram_dq[7]
+set_location_assignment PIN_38 -to sdram_dq[6]
+set_location_assignment PIN_34 -to sdram_dq[5]
+set_location_assignment PIN_33 -to sdram_dq[4]
+set_location_assignment PIN_32 -to sdram_dq[3]
+set_location_assignment PIN_31 -to sdram_dq[2]
+set_location_assignment PIN_30 -to sdram_dq[1]
+set_location_assignment PIN_28 -to sdram_dq[0]
+set_location_assignment PIN_55 -to sdram_dqm[1]
+set_location_assignment PIN_42 -to sdram_dqm[0]
+set_location_assignment PIN_71 -to sdram_ras_n
+set_location_assignment PIN_69 -to sdram_wre_n
+set_location_assignment PIN_114 -to TXD
+set_location_assignment PIN_115 -to RXD
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVCMOS"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Testbench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME Testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "700 us" -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Testbench -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE CHR_ROM.qip -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE CHR_ROM.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE d_cache.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE decode_unit.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE hazard_unit.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE internal_mem.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE mask_unit.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE MC10_CHR16.hex -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE MC6847_gen3.sv -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE MSC.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE p_cache.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE p_mem.qip -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE p_mem.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PC.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PLL0.ppf -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PLL0.qip -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PLL0.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PRG_ROM.qip -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PRG_ROM.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE right_rotate.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE RIPTIDE_II.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE riptide_validation.mif -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE sdr.sv -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE sdr_parameters.sv -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE SDRAM_DP64_I.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE serial.sv -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE shift_merge.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE toplevel.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE UART.sv -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE VGA.v -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE VGA_RAM.qip -section_id Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE VGA_RAM.v -section_id Testbench
+set_global_assignment -name SYSTEMVERILOG_FILE MULTIPLEXED_HEX_DRIVER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sdr_parameters.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sdr.sv
+set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE MC6847_gen3.sv
+set_global_assignment -name VERILOG_FILE VGA.v
+set_global_assignment -name SYSTEMVERILOG_FILE UART.sv
+set_global_assignment -name VERILOG_FILE toplevel.v
+set_global_assignment -name VERILOG_FILE testbench.v
+set_global_assignment -name VERILOG_FILE shift_merge.v
+set_global_assignment -name SYSTEMVERILOG_FILE serial.sv
+set_global_assignment -name VERILOG_FILE RIPTIDE_II.v
+set_global_assignment -name VERILOG_FILE right_rotate.v
+set_global_assignment -name VERILOG_FILE PC.v
+set_global_assignment -name VERILOG_FILE p_cache.v
+set_global_assignment -name VERILOG_FILE MSC.v
+set_global_assignment -name VERILOG_FILE mask_unit.v
+set_global_assignment -name VERILOG_FILE internal_mem.v
+set_global_assignment -name VERILOG_FILE hazard_unit.v
+set_global_assignment -name VERILOG_FILE decode_unit.v
+set_global_assignment -name VERILOG_FILE d_cache.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE SDRAM_DP64_I.v
+set_global_assignment -name QIP_FILE p_mem.qip
+set_global_assignment -name QIP_FILE PRG_ROM.qip
+set_global_assignment -name QIP_FILE VGA_RAM.qip
+set_global_assignment -name QIP_FILE CHR_ROM.qip
+set_global_assignment -name QIP_FILE PLL0.qip
+set_location_assignment PIN_124 -to hex_out[6]
+set_location_assignment PIN_126 -to hex_out[5]
+set_location_assignment PIN_132 -to hex_out[4]
+set_location_assignment PIN_129 -to hex_out[3]
+set_location_assignment PIN_125 -to hex_out[2]
+set_location_assignment PIN_121 -to hex_out[1]
+set_location_assignment PIN_128 -to hex_out[0]
+set_location_assignment PIN_133 -to seg_sel[3]
+set_location_assignment PIN_135 -to seg_sel[2]
+set_location_assignment PIN_136 -to seg_sel[1]
+set_location_assignment PIN_137 -to seg_sel[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
