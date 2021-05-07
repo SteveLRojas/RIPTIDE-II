@@ -169,7 +169,8 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
 				latch_wren_reg <= 1'b0;
@@ -226,7 +227,8 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
 				latch_wren_reg <= 1'b0;
@@ -283,7 +285,8 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
 				latch_wren_reg <= 1'b0;
@@ -340,7 +343,8 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
+			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
 				latch_wren_reg <= 1'b0;
@@ -481,7 +485,8 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[11];
-			if((I_reg[12:11] != 2'b00) || (I_reg[10:8] == 3'h7))
+			//if((I_reg[12:11] != 2'b00) || (I_reg[10:8] == 3'h7))
+			if(I_reg[12] || (I_reg[10:8] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
 				latch_wren_reg <= 1'b0;

@@ -49,6 +49,7 @@ wire NZ;
 wire decoder_RST;
 wire SC;
 wire WC;
+wire RC;
 wire n_LB_w;
 wire n_RB_w;
 wire n_LB_r;
@@ -84,6 +85,7 @@ wire branch_hazard;
 wire pipeline_flush;
 
 assign IO_WC = WC6;
+assign IO_RC = RC & ~(SC1 | SC2 | SC3 | SC4 | SC5 | SC6 | SC7);	//no IO read during IO hazard to prevent false cache misses.
 assign IO_n_LB_w = n_LB_w6;
 assign IO_n_LB_r = n_LB_r;
 
@@ -434,7 +436,7 @@ decode_unit decode_unit0(
 		.I(I),
 		.SC(SC),
 		.WC(WC),
-		.RC(IO_RC),
+		.RC(RC),
 		.n_LB_w(n_LB_w),
 		.n_LB_r(n_LB_r),
 		.rotate_S0(rotate_S0),

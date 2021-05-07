@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PVP
-Sat Apr 10 20:30:46 2021
+Thu May 06 20:59:05 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -71,13 +71,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 10 20:30:46 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 06 20:59:04 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; PVP                                         ;
 ; Top-level Entity Name              ; PVP                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,265                                       ;
-;     Total combinational functions  ; 1,695                                       ;
+; Total logic elements               ; 2,267                                       ;
+;     Total combinational functions  ; 1,697                                       ;
 ;     Dedicated logic registers      ; 1,278                                       ;
 ; Total registers                    ; 1278                                        ;
 ; Total pins                         ; 66                                          ;
@@ -202,36 +202,36 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; MULTIPLEXED_HEX_DRIVER.sv        ; yes             ; User SystemVerilog HDL File            ; D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv                                ;         ;
-; MC6847_gen3.sv                   ; yes             ; User SystemVerilog HDL File            ; D:/RIPTIDE-II_SDRAM/MC6847_gen3.sv                                           ;         ;
-; VGA.v                            ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/VGA.v                                                    ;         ;
-; UART.sv                          ; yes             ; User SystemVerilog HDL File            ; D:/RIPTIDE-II_SDRAM/UART.sv                                                  ;         ;
-; toplevel.v                       ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/toplevel.v                                               ;         ;
-; shift_merge.v                    ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/shift_merge.v                                            ;         ;
-; serial.sv                        ; yes             ; User SystemVerilog HDL File            ; D:/RIPTIDE-II_SDRAM/serial.sv                                                ;         ;
-; RIPTIDE_II.v                     ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v                                             ;         ;
-; right_rotate.v                   ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/right_rotate.v                                           ;         ;
-; PC.v                             ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/PC.v                                                     ;         ;
-; p_cache.v                        ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/p_cache.v                                                ;         ;
-; MSC.v                            ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/MSC.v                                                    ;         ;
-; mask_unit.v                      ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/mask_unit.v                                              ;         ;
-; internal_mem.v                   ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/internal_mem.v                                           ;         ;
-; hazard_unit.v                    ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/hazard_unit.v                                            ;         ;
-; decode_unit.v                    ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/decode_unit.v                                            ;         ;
-; d_cache.v                        ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/d_cache.v                                                ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/ALU.v                                                    ;         ;
-; SDRAM_DP64_I.v                   ; yes             ; User Verilog HDL File                  ; D:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v                                           ;         ;
-; p_mem.v                          ; yes             ; User Wizard-Generated File             ; D:/RIPTIDE-II_SDRAM/p_mem.v                                                  ;         ;
-; PRG_ROM.v                        ; yes             ; User Wizard-Generated File             ; D:/RIPTIDE-II_SDRAM/PRG_ROM.v                                                ;         ;
-; VGA_RAM.v                        ; yes             ; User Wizard-Generated File             ; D:/RIPTIDE-II_SDRAM/VGA_RAM.v                                                ;         ;
-; CHR_ROM.v                        ; yes             ; User Wizard-Generated File             ; D:/RIPTIDE-II_SDRAM/CHR_ROM.v                                                ;         ;
-; PLL0.v                           ; yes             ; User Wizard-Generated File             ; D:/RIPTIDE-II_SDRAM/PLL0.v                                                   ;         ;
+; MULTIPLEXED_HEX_DRIVER.sv        ; yes             ; User SystemVerilog HDL File            ; E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv                                ;         ;
+; MC6847_gen3.sv                   ; yes             ; User SystemVerilog HDL File            ; E:/RIPTIDE-II_SDRAM/MC6847_gen3.sv                                           ;         ;
+; VGA.v                            ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/VGA.v                                                    ;         ;
+; UART.sv                          ; yes             ; User SystemVerilog HDL File            ; E:/RIPTIDE-II_SDRAM/UART.sv                                                  ;         ;
+; toplevel.v                       ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/toplevel.v                                               ;         ;
+; shift_merge.v                    ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/shift_merge.v                                            ;         ;
+; serial.sv                        ; yes             ; User SystemVerilog HDL File            ; E:/RIPTIDE-II_SDRAM/serial.sv                                                ;         ;
+; RIPTIDE_II.v                     ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v                                             ;         ;
+; right_rotate.v                   ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/right_rotate.v                                           ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/PC.v                                                     ;         ;
+; p_cache.v                        ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/p_cache.v                                                ;         ;
+; MSC.v                            ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/MSC.v                                                    ;         ;
+; mask_unit.v                      ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/mask_unit.v                                              ;         ;
+; internal_mem.v                   ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/internal_mem.v                                           ;         ;
+; hazard_unit.v                    ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/hazard_unit.v                                            ;         ;
+; decode_unit.v                    ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/decode_unit.v                                            ;         ;
+; d_cache.v                        ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/d_cache.v                                                ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/ALU.v                                                    ;         ;
+; SDRAM_DP64_I.v                   ; yes             ; User Verilog HDL File                  ; E:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v                                           ;         ;
+; p_mem.v                          ; yes             ; User Wizard-Generated File             ; E:/RIPTIDE-II_SDRAM/p_mem.v                                                  ;         ;
+; PRG_ROM.v                        ; yes             ; User Wizard-Generated File             ; E:/RIPTIDE-II_SDRAM/PRG_ROM.v                                                ;         ;
+; VGA_RAM.v                        ; yes             ; User Wizard-Generated File             ; E:/RIPTIDE-II_SDRAM/VGA_RAM.v                                                ;         ;
+; CHR_ROM.v                        ; yes             ; User Wizard-Generated File             ; E:/RIPTIDE-II_SDRAM/CHR_ROM.v                                                ;         ;
+; PLL0.v                           ; yes             ; User Wizard-Generated File             ; E:/RIPTIDE-II_SDRAM/PLL0.v                                                   ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
 ; stratixii_pll.inc                ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
 ; cycloneii_pll.inc                ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pll0_altpll.v                 ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/pll0_altpll.v                                         ;         ;
+; db/pll0_altpll.v                 ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/pll0_altpll.v                                         ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -240,25 +240,25 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_jdg1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf                                   ;         ;
-; db/altsyncram_0bb1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/altsyncram_0bb1.tdf                                   ;         ;
-; riptide_validation.mif           ; yes             ; Auto-Found Memory Initialization File  ; D:/RIPTIDE-II_SDRAM/riptide_validation.mif                                   ;         ;
-; db/altsyncram_60i2.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/altsyncram_60i2.tdf                                   ;         ;
-; db/altsyncram_57a1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/altsyncram_57a1.tdf                                   ;         ;
-; mc10_chr16.hex                   ; yes             ; Auto-Found Memory Initialization File  ; D:/RIPTIDE-II_SDRAM/mc10_chr16.hex                                           ;         ;
+; db/altsyncram_jdg1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf                                   ;         ;
+; db/altsyncram_0bb1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/altsyncram_0bb1.tdf                                   ;         ;
+; riptide_validation.mif           ; yes             ; Auto-Found Memory Initialization File  ; E:/RIPTIDE-II_SDRAM/riptide_validation.mif                                   ;         ;
+; db/altsyncram_60i2.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/altsyncram_60i2.tdf                                   ;         ;
+; db/altsyncram_57a1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/altsyncram_57a1.tdf                                   ;         ;
+; mc10_chr16.hex                   ; yes             ; Auto-Found Memory Initialization File  ; E:/RIPTIDE-II_SDRAM/mc10_chr16.hex                                           ;         ;
 ; altshift_taps.tdf                ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift_taps.tdf     ;         ;
 ; lpm_counter.inc                  ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc       ;         ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc       ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
-; db/shift_taps_cmm.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/shift_taps_cmm.tdf                                    ;         ;
-; db/altsyncram_2b81.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/altsyncram_2b81.tdf                                   ;         ;
-; db/cntr_4pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/cntr_4pf.tdf                                          ;         ;
-; db/shift_taps_ekm.tdf            ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/shift_taps_ekm.tdf                                    ;         ;
-; db/altsyncram_1961.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/altsyncram_1961.tdf                                   ;         ;
-; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/add_sub_24e.tdf                                       ;         ;
-; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/cntr_6pf.tdf                                          ;         ;
-; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/cmpr_ogc.tdf                                          ;         ;
-; db/cntr_p8h.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/RIPTIDE-II_SDRAM/db/cntr_p8h.tdf                                          ;         ;
+; db/shift_taps_cmm.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/shift_taps_cmm.tdf                                    ;         ;
+; db/altsyncram_2b81.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/altsyncram_2b81.tdf                                   ;         ;
+; db/cntr_4pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/cntr_4pf.tdf                                          ;         ;
+; db/shift_taps_ekm.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/shift_taps_ekm.tdf                                    ;         ;
+; db/altsyncram_1961.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/altsyncram_1961.tdf                                   ;         ;
+; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/add_sub_24e.tdf                                       ;         ;
+; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/cntr_6pf.tdf                                          ;         ;
+; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/cmpr_ogc.tdf                                          ;         ;
+; db/cntr_p8h.tdf                  ; yes             ; Auto-Generated Megafunction            ; E:/RIPTIDE-II_SDRAM/db/cntr_p8h.tdf                                          ;         ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
@@ -267,16 +267,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                             ;
 +---------------------------------------------+-----------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,265                                                                             ;
+; Estimated Total logic elements              ; 2,267                                                                             ;
 ;                                             ;                                                                                   ;
-; Total combinational functions               ; 1695                                                                              ;
+; Total combinational functions               ; 1697                                                                              ;
 ; Logic element usage by number of LUT inputs ;                                                                                   ;
-;     -- 4 input functions                    ; 927                                                                               ;
-;     -- 3 input functions                    ; 400                                                                               ;
-;     -- <=2 input functions                  ; 368                                                                               ;
+;     -- 4 input functions                    ; 933                                                                               ;
+;     -- 3 input functions                    ; 408                                                                               ;
+;     -- <=2 input functions                  ; 356                                                                               ;
 ;                                             ;                                                                                   ;
 ; Logic elements by mode                      ;                                                                                   ;
-;     -- normal mode                          ; 1552                                                                              ;
+;     -- normal mode                          ; 1554                                                                              ;
 ;     -- arithmetic mode                      ; 143                                                                               ;
 ;                                             ;                                                                                   ;
 ; Total registers                             ; 1278                                                                              ;
@@ -293,7 +293,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                                   ;
 ; Maximum fan-out node                        ; PLL0:PLL_inst|altpll:altpll_component|PLL0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 1475                                                                              ;
-; Total fan-out                               ; 12169                                                                             ;
+; Total fan-out                               ; 12187                                                                             ;
 ; Average fan-out                             ; 3.67                                                                              ;
 +---------------------------------------------+-----------------------------------------------------------------------------------+
 
@@ -303,7 +303,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name            ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |PVP                                            ; 1695 (24)           ; 1278 (22)                 ; 177218      ; 0            ; 0       ; 0         ; 66   ; 0            ; |PVP                                                                                                                  ; PVP                    ; work         ;
+; |PVP                                            ; 1697 (24)           ; 1278 (22)                 ; 177218      ; 0            ; 0       ; 0         ; 66   ; 0            ; |PVP                                                                                                                  ; PVP                    ; work         ;
 ;    |MSC:MSC_inst|                               ; 19 (19)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|MSC:MSC_inst                                                                                                     ; MSC                    ; work         ;
 ;    |MULTIPLEXED_HEX_DRIVER:multi_hex|           ; 64 (18)             ; 18 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|MULTIPLEXED_HEX_DRIVER:multi_hex                                                                                 ; MULTIPLEXED_HEX_DRIVER ; work         ;
 ;       |frame_clk:frame_clk_inst|                ; 18 (18)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|MULTIPLEXED_HEX_DRIVER:multi_hex|frame_clk:frame_clk_inst                                                        ; frame_clk              ; work         ;
@@ -317,9 +317,9 @@ refer to the applicable agreement for further details.
 ;    |PRG_ROM:PRG_inst|                           ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|PRG_ROM:PRG_inst                                                                                                 ; PRG_ROM                ; work         ;
 ;       |altsyncram:altsyncram_component|         ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|PRG_ROM:PRG_inst|altsyncram:altsyncram_component                                                                 ; altsyncram             ; work         ;
 ;          |altsyncram_0bb1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|PRG_ROM:PRG_inst|altsyncram:altsyncram_component|altsyncram_0bb1:auto_generated                                  ; altsyncram_0bb1        ; work         ;
-;    |RIPTIDE_II:CPU_inst|                        ; 778 (165)           ; 687 (156)                 ; 66          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst                                                                                              ; RIPTIDE_II             ; work         ;
+;    |RIPTIDE_II:CPU_inst|                        ; 776 (168)           ; 687 (156)                 ; 66          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst                                                                                              ; RIPTIDE_II             ; work         ;
 ;       |ALU:ALU0|                                ; 46 (46)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|ALU:ALU0                                                                                     ; ALU                    ; work         ;
-;       |PC:PC0|                                  ; 213 (112)           ; 292 (122)                 ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0                                                                                       ; PC                     ; work         ;
+;       |PC:PC0|                                  ; 212 (111)           ; 292 (122)                 ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0                                                                                       ; PC                     ; work         ;
 ;          |altshift_taps:A_pipe1_rtl_0|          ; 9 (0)               ; 6 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|altshift_taps:A_pipe1_rtl_0                                                           ; altshift_taps          ; work         ;
 ;             |shift_taps_ekm:auto_generated|     ; 9 (2)               ; 6 (3)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|altshift_taps:A_pipe1_rtl_0|shift_taps_ekm:auto_generated                             ; shift_taps_ekm         ; work         ;
 ;                |altsyncram_1961:altsyncram4|    ; 0 (0)               ; 0 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|altshift_taps:A_pipe1_rtl_0|shift_taps_ekm:auto_generated|altsyncram_1961:altsyncram4 ; altsyncram_1961        ; work         ;
@@ -330,10 +330,10 @@ refer to the applicable agreement for further details.
 ;          |shift_taps_cmm:auto_generated|        ; 1 (0)               ; 1 (0)                     ; 18          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|altshift_taps:PC_I_field1_rtl_0|shift_taps_cmm:auto_generated                                ; shift_taps_cmm         ; work         ;
 ;             |altsyncram_2b81:altsyncram2|       ; 0 (0)               ; 0 (0)                     ; 18          ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|altshift_taps:PC_I_field1_rtl_0|shift_taps_cmm:auto_generated|altsyncram_2b81:altsyncram2    ; altsyncram_2b81        ; work         ;
 ;             |cntr_4pf:cntr1|                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|altshift_taps:PC_I_field1_rtl_0|shift_taps_cmm:auto_generated|cntr_4pf:cntr1                 ; cntr_4pf               ; work         ;
-;       |decode_unit:decode_unit0|                ; 106 (106)           ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0                                                                     ; decode_unit            ; work         ;
-;       |hazard_unit:hazard_unit0|                ; 40 (40)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|hazard_unit:hazard_unit0                                                                     ; hazard_unit            ; work         ;
+;       |decode_unit:decode_unit0|                ; 118 (118)           ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0                                                                     ; decode_unit            ; work         ;
+;       |hazard_unit:hazard_unit0|                ; 23 (23)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|hazard_unit:hazard_unit0                                                                     ; hazard_unit            ; work         ;
 ;       |mask_unit:mask0|                         ; 7 (7)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|mask_unit:mask0                                                                              ; mask_unit              ; work         ;
-;       |reg_file:reg_file0|                      ; 55 (55)             ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|reg_file:reg_file0                                                                           ; reg_file               ; work         ;
+;       |reg_file:reg_file0|                      ; 56 (56)             ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|reg_file:reg_file0                                                                           ; reg_file               ; work         ;
 ;       |right_rotate:right_rotate0|              ; 35 (35)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|right_rotate:right_rotate0                                                                   ; right_rotate           ; work         ;
 ;       |shift_merge:shift_merge0|                ; 110 (110)           ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|RIPTIDE_II:CPU_inst|shift_merge:shift_merge0                                                                     ; shift_merge            ; work         ;
 ;    |SDRAM_DP64_I:SDRAM_controller|              ; 328 (328)           ; 317 (317)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|SDRAM_DP64_I:SDRAM_controller                                                                                    ; SDRAM_DP64_I           ; work         ;
@@ -345,7 +345,7 @@ refer to the applicable agreement for further details.
 ;       |VGA_RAM:RAM_VGA|                         ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|VGA:VGA_inst|VGA_RAM:RAM_VGA                                                                                     ; VGA_RAM                ; work         ;
 ;          |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component                                                     ; altsyncram             ; work         ;
 ;             |altsyncram_60i2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component|altsyncram_60i2:auto_generated                      ; altsyncram_60i2        ; work         ;
-;    |d_cache:d_cache_inst|                       ; 187 (187)           ; 35 (35)                   ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|d_cache:d_cache_inst                                                                                             ; d_cache                ; work         ;
+;    |d_cache:d_cache_inst|                       ; 190 (190)           ; 35 (35)                   ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|d_cache:d_cache_inst                                                                                             ; d_cache                ; work         ;
 ;       |p_mem:d_mem_inst|                        ; 0 (0)               ; 0 (0)                     ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|d_cache:d_cache_inst|p_mem:d_mem_inst                                                                            ; p_mem                  ; work         ;
 ;          |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component                                            ; altsyncram             ; work         ;
 ;             |altsyncram_jdg1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated             ; altsyncram_jdg1        ; work         ;
@@ -353,7 +353,7 @@ refer to the applicable agreement for further details.
 ;       |p_mem:p_mem_inst|                        ; 0 (0)               ; 0 (0)                     ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|p_cache:p_cache_inst|p_mem:p_mem_inst                                                                            ; p_mem                  ; work         ;
 ;          |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component                                            ; altsyncram             ; work         ;
 ;             |altsyncram_jdg1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 35328       ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated             ; altsyncram_jdg1        ; work         ;
-;    |serial:serial_inst|                         ; 106 (15)            ; 64 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|serial:serial_inst                                                                                               ; serial                 ; work         ;
+;    |serial:serial_inst|                         ; 107 (16)            ; 64 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|serial:serial_inst                                                                                               ; serial                 ; work         ;
 ;       |UART:UART_inst|                          ; 91 (91)             ; 52 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PVP|serial:serial_inst|UART:UART_inst                                                                                ; UART                   ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -501,11 +501,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 1278  ;
-; Number of registers using Synchronous Clear  ; 116   ;
-; Number of registers using Synchronous Load   ; 62    ;
+; Number of registers using Synchronous Clear  ; 115   ;
+; Number of registers using Synchronous Load   ; 61    ;
 ; Number of registers using Asynchronous Clear ; 274   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1009  ;
+; Number of registers using Clock Enable       ; 1006  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -547,60 +547,60 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|word_address[1]                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|refresh_timer[5]               ;
-; 3:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|alu_mux1                                 ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|regf_w_reg[0]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|rotate_R_reg[1] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|pixel_count[5]                  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |PVP|MSC:MSC_inst|p2_reset_reg                                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|word_address[0]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|refresh_timer[9]               ;
+; 3:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|alu_I_field1[2]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|regf_w_reg[2]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|rotate_R_reg[0] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|pixel_count[6]                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |PVP|MSC:MSC_inst|p2_flush_reg                                    ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|A_reg[0]                          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|shift_merge:shift_merge0|merge_in[4]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|horiz_scaler[2]                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|I_alternate[13] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|call_stack:cstack0|address[2]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|JMP             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|rx_data[0]                 ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|tx_timer[3]                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|B                               ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|reg_file:reg_file0|a_reg[0]              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|CALL            ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |PVP|p_cache:p_cache_inst|CPU_address_hold[5]                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|horiz_scaler[0]                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|I_alternate[7]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|call_stack:cstack0|address[0]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|XEC             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|rx_data[3]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|tx_timer[7]                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|R                               ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|reg_file:reg_file0|a_reg[2]              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|RET             ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |PVP|p_cache:p_cache_inst|CPU_address_hold[15]                    ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|col_count[2]                    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|line_count[2]                   ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|ALU:ALU0|alu_reg[1]                      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|rx_frame[0]                ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|rx_timer[3]                ;
-; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |PVP|d_cache:d_cache_inst|CPU_address_hold[11]                    ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|sdram_a[5]                     ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|line_count[8]                   ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|ALU:ALU0|alu_reg[2]                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|rx_frame[4]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|rx_timer[5]                ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |PVP|d_cache:d_cache_inst|CPU_address_hold[5]                     ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|sdram_a[4]                     ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|cell_count[2]                   ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|I_reg[11]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|init_refresh_count[2]          ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|I_reg[10]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|init_refresh_count[0]          ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|PC_reg[3]                         ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|tx_frame[7]                ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PVP|serial:serial_inst|UART:UART_inst|tx_frame[4]                ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|alu_op_reg[1]   ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|decode_unit:decode_unit0|WC_reg          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|cell_line[0]                    ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|vert_scaler[2]                  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|A_reg[12]                         ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[15]                  ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[26]                  ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[37]                  ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[61]                  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|row_count[2]                    ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|IV_in[1]                                 ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|cell_line[2]                    ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|vert_scaler[0]                  ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|PC:PC0|A_reg[9]                          ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[9]                   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[29]                  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[43]                  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_hold[55]                  ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|row_count[0]                    ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |PVP|RIPTIDE_II:CPU_inst|IV_in[6]                                 ;
 ; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|address_hold[18]               ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|address_hold[12]               ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|address_hold[9]                ;
 ; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |PVP|SDRAM_DP64_I:SDRAM_controller|data_out[9]                    ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |PVP|MULTIPLEXED_HEX_DRIVER:multi_hex|Mux1                        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|Mux2                            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |PVP|p_cache:p_cache_inst|Mux15                                   ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |PVP|RIPTIDE_II:CPU_inst|right_rotate:right_rotate0|selected[7]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[3]                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[38]                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[19]                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[50]                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[9]                              ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |PVP|MULTIPLEXED_HEX_DRIVER:multi_hex|Mux2                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PVP|VGA:VGA_inst|MC6847_gen3:VDG|Mux1                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |PVP|p_cache:p_cache_inst|Mux12                                   ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |PVP|RIPTIDE_II:CPU_inst|right_rotate:right_rotate0|selected[1]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[2]                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[33]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[20]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[49]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[11]                             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[46]                             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[26]                             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PVP|d_cache:d_cache_inst|cache_d[56]                             ;
@@ -1517,31 +1517,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 1278                        ;
 ;     CLR               ; 43                          ;
 ;     CLR SCLR          ; 1                           ;
-;     ENA               ; 692                         ;
+;     ENA               ; 690                         ;
 ;     ENA CLR           ; 214                         ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     ENA SCLR          ; 43                          ;
-;     ENA SCLR SLD      ; 28                          ;
+;     ENA SCLR SLD      ; 27                          ;
 ;     ENA SLD           ; 16                          ;
 ;     SCLR              ; 44                          ;
 ;     SLD               ; 2                           ;
-;     plain             ; 179                         ;
+;     plain             ; 182                         ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 1699                        ;
+; cycloneiii_lcell_comb ; 1701                        ;
 ;     arith             ; 143                         ;
 ;         2 data inputs ; 133                         ;
 ;         3 data inputs ; 10                          ;
-;     normal            ; 1556                        ;
+;     normal            ; 1558                        ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 28                          ;
-;         2 data inputs ; 206                         ;
-;         3 data inputs ; 390                         ;
-;         4 data inputs ; 927                         ;
+;         2 data inputs ; 194                         ;
+;         3 data inputs ; 398                         ;
+;         4 data inputs ; 933                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 195                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.71                        ;
+; Average LUT depth     ; 2.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1560,77 +1560,77 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Apr 10 20:30:03 2021
+    Info: Processing started: Thu May 06 20:58:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RIPTIDE-II_SDRAM -c PVP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 3 design units, including 3 entities, in source file multiplexed_hex_driver.sv
-    Info (12023): Found entity 1: MULTIPLEXED_HEX_DRIVER File: D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 1
-    Info (12023): Found entity 2: hexdriver File: D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 30
-    Info (12023): Found entity 3: frame_clk File: D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 56
-Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(80): overriding existing definition for macro "sg75", which was defined in "sdr_parameters.sv", line 30 File: D:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 80
-Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(120): overriding existing definition for macro "x16", which was defined in "sdr_parameters.sv", line 32 File: D:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 120
+    Info (12023): Found entity 1: MULTIPLEXED_HEX_DRIVER File: E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 1
+    Info (12023): Found entity 2: hexdriver File: E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 30
+    Info (12023): Found entity 3: frame_clk File: E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 56
+Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(80): overriding existing definition for macro "sg75", which was defined in "sdr_parameters.sv", line 30 File: E:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 80
+Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(120): overriding existing definition for macro "x16", which was defined in "sdr_parameters.sv", line 32 File: E:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 120
 Info (12021): Found 0 design units, including 0 entities, in source file sdr_parameters.sv
-Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(30): overriding existing definition for macro "sg75", which was defined in "sdr_parameters.sv", line 30 File: D:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 30
-Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(32): overriding existing definition for macro "x16", which was defined in "sdr_parameters.sv", line 32 File: D:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 32
-Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(80): overriding existing definition for macro "sg75", which was defined in "sdr_parameters.sv", line 30 File: D:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 80
-Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(120): overriding existing definition for macro "x16", which was defined in "sdr_parameters.sv", line 32 File: D:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 120
+Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(30): overriding existing definition for macro "sg75", which was defined in "sdr_parameters.sv", line 30 File: E:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 30
+Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(32): overriding existing definition for macro "x16", which was defined in "sdr_parameters.sv", line 32 File: E:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 32
+Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(80): overriding existing definition for macro "sg75", which was defined in "sdr_parameters.sv", line 30 File: E:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 80
+Warning (10274): Verilog HDL macro warning at sdr_parameters.sv(120): overriding existing definition for macro "x16", which was defined in "sdr_parameters.sv", line 32 File: E:/RIPTIDE-II_SDRAM/sdr_parameters.sv Line: 120
 Info (12021): Found 1 design units, including 1 entities, in source file sdr.sv
-    Info (12023): Found entity 1: sdr File: D:/RIPTIDE-II_SDRAM/sdr.sv Line: 48
+    Info (12023): Found entity 1: sdr File: E:/RIPTIDE-II_SDRAM/sdr.sv Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file mc6847_gen3.sv
-    Info (12023): Found entity 1: MC6847_gen3 File: D:/RIPTIDE-II_SDRAM/MC6847_gen3.sv Line: 1
+    Info (12023): Found entity 1: MC6847_gen3 File: E:/RIPTIDE-II_SDRAM/MC6847_gen3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.v
-    Info (12023): Found entity 1: VGA File: D:/RIPTIDE-II_SDRAM/VGA.v Line: 1
+    Info (12023): Found entity 1: VGA File: E:/RIPTIDE-II_SDRAM/VGA.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart.sv
-    Info (12023): Found entity 1: UART File: D:/RIPTIDE-II_SDRAM/UART.sv Line: 1
+    Info (12023): Found entity 1: UART File: E:/RIPTIDE-II_SDRAM/UART.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.v
-    Info (12023): Found entity 1: PVP File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 1
+    Info (12023): Found entity 1: PVP File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
-    Info (12023): Found entity 1: Testbench File: D:/RIPTIDE-II_SDRAM/testbench.v Line: 2
+    Info (12023): Found entity 1: Testbench File: E:/RIPTIDE-II_SDRAM/testbench.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file shift_merge.v
-    Info (12023): Found entity 1: shift_merge File: D:/RIPTIDE-II_SDRAM/shift_merge.v Line: 1
+    Info (12023): Found entity 1: shift_merge File: E:/RIPTIDE-II_SDRAM/shift_merge.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file serial.sv
-    Info (12023): Found entity 1: serial File: D:/RIPTIDE-II_SDRAM/serial.sv Line: 1
+    Info (12023): Found entity 1: serial File: E:/RIPTIDE-II_SDRAM/serial.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file riptide_ii.v
-    Info (12023): Found entity 1: RIPTIDE_II File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 1
+    Info (12023): Found entity 1: RIPTIDE_II File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file right_rotate.v
-    Info (12023): Found entity 1: right_rotate File: D:/RIPTIDE-II_SDRAM/right_rotate.v Line: 1
+    Info (12023): Found entity 1: right_rotate File: E:/RIPTIDE-II_SDRAM/right_rotate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: D:/RIPTIDE-II_SDRAM/PC.v Line: 1
+    Info (12023): Found entity 1: PC File: E:/RIPTIDE-II_SDRAM/PC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file p_cache.v
-    Info (12023): Found entity 1: p_cache File: D:/RIPTIDE-II_SDRAM/p_cache.v Line: 1
+    Info (12023): Found entity 1: p_cache File: E:/RIPTIDE-II_SDRAM/p_cache.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file msc.v
-    Info (12023): Found entity 1: MSC File: D:/RIPTIDE-II_SDRAM/MSC.v Line: 2
+    Info (12023): Found entity 1: MSC File: E:/RIPTIDE-II_SDRAM/MSC.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mask_unit.v
-    Info (12023): Found entity 1: mask_unit File: D:/RIPTIDE-II_SDRAM/mask_unit.v Line: 1
+    Info (12023): Found entity 1: mask_unit File: E:/RIPTIDE-II_SDRAM/mask_unit.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file internal_mem.v
-    Info (12023): Found entity 1: reg_file File: D:/RIPTIDE-II_SDRAM/internal_mem.v Line: 1
-    Info (12023): Found entity 2: call_stack File: D:/RIPTIDE-II_SDRAM/internal_mem.v Line: 17
+    Info (12023): Found entity 1: reg_file File: E:/RIPTIDE-II_SDRAM/internal_mem.v Line: 1
+    Info (12023): Found entity 2: call_stack File: E:/RIPTIDE-II_SDRAM/internal_mem.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file hazard_unit.v
-    Info (12023): Found entity 1: hazard_unit File: D:/RIPTIDE-II_SDRAM/hazard_unit.v Line: 1
+    Info (12023): Found entity 1: hazard_unit File: E:/RIPTIDE-II_SDRAM/hazard_unit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decode_unit.v
-    Info (12023): Found entity 1: decode_unit File: D:/RIPTIDE-II_SDRAM/decode_unit.v Line: 1
+    Info (12023): Found entity 1: decode_unit File: E:/RIPTIDE-II_SDRAM/decode_unit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_cache.v
-    Info (12023): Found entity 1: d_cache File: D:/RIPTIDE-II_SDRAM/d_cache.v Line: 1
+    Info (12023): Found entity 1: d_cache File: E:/RIPTIDE-II_SDRAM/d_cache.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: D:/RIPTIDE-II_SDRAM/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: E:/RIPTIDE-II_SDRAM/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sdram_dp64_i.v
-    Info (12023): Found entity 1: SDRAM_DP64_I File: D:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v Line: 1
+    Info (12023): Found entity 1: SDRAM_DP64_I File: E:/RIPTIDE-II_SDRAM/SDRAM_DP64_I.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file p_mem.v
-    Info (12023): Found entity 1: p_mem File: D:/RIPTIDE-II_SDRAM/p_mem.v Line: 39
+    Info (12023): Found entity 1: p_mem File: E:/RIPTIDE-II_SDRAM/p_mem.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file prg_rom.v
-    Info (12023): Found entity 1: PRG_ROM File: D:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 39
+    Info (12023): Found entity 1: PRG_ROM File: E:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file vga_ram.v
-    Info (12023): Found entity 1: VGA_RAM File: D:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 39
+    Info (12023): Found entity 1: VGA_RAM File: E:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file chr_rom.v
-    Info (12023): Found entity 1: CHR_ROM File: D:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 39
+    Info (12023): Found entity 1: CHR_ROM File: E:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file pll0.v
-    Info (12023): Found entity 1: PLL0 File: D:/RIPTIDE-II_SDRAM/PLL0.v Line: 39
+    Info (12023): Found entity 1: PLL0 File: E:/RIPTIDE-II_SDRAM/PLL0.v Line: 39
 Info (12127): Elaborating entity "PVP" for the top level hierarchy
-Info (12128): Elaborating entity "PLL0" for hierarchy "PLL0:PLL_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 66
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component" File: D:/RIPTIDE-II_SDRAM/PLL0.v Line: 98
-Info (12130): Elaborated megafunction instantiation "PLL0:PLL_inst|altpll:altpll_component" File: D:/RIPTIDE-II_SDRAM/PLL0.v Line: 98
-Info (12133): Instantiated megafunction "PLL0:PLL_inst|altpll:altpll_component" with the following parameter: File: D:/RIPTIDE-II_SDRAM/PLL0.v Line: 98
+Info (12128): Elaborating entity "PLL0" for hierarchy "PLL0:PLL_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 66
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component" File: E:/RIPTIDE-II_SDRAM/PLL0.v Line: 98
+Info (12130): Elaborated megafunction instantiation "PLL0:PLL_inst|altpll:altpll_component" File: E:/RIPTIDE-II_SDRAM/PLL0.v Line: 98
+Info (12133): Instantiated megafunction "PLL0:PLL_inst|altpll:altpll_component" with the following parameter: File: E:/RIPTIDE-II_SDRAM/PLL0.v Line: 98
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1694,13 +1694,13 @@ Info (12133): Instantiated megafunction "PLL0:PLL_inst|altpll:altpll_component" 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll0_altpll.v
-    Info (12023): Found entity 1: PLL0_altpll File: D:/RIPTIDE-II_SDRAM/db/pll0_altpll.v Line: 29
+    Info (12023): Found entity 1: PLL0_altpll File: E:/RIPTIDE-II_SDRAM/db/pll0_altpll.v Line: 29
 Info (12128): Elaborating entity "PLL0_altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component|PLL0_altpll:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "p_cache" for hierarchy "p_cache:p_cache_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 88
-Info (12128): Elaborating entity "p_mem" for hierarchy "p_cache:p_cache_inst|p_mem:p_mem_inst" File: D:/RIPTIDE-II_SDRAM/p_cache.v Line: 101
-Info (12128): Elaborating entity "altsyncram" for hierarchy "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/p_mem.v Line: 85
-Info (12130): Elaborated megafunction instantiation "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/p_mem.v Line: 85
-Info (12133): Instantiated megafunction "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/RIPTIDE-II_SDRAM/p_mem.v Line: 85
+Info (12128): Elaborating entity "p_cache" for hierarchy "p_cache:p_cache_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 88
+Info (12128): Elaborating entity "p_mem" for hierarchy "p_cache:p_cache_inst|p_mem:p_mem_inst" File: E:/RIPTIDE-II_SDRAM/p_cache.v Line: 101
+Info (12128): Elaborating entity "altsyncram" for hierarchy "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/p_mem.v Line: 85
+Info (12130): Elaborated megafunction instantiation "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/p_mem.v Line: 85
+Info (12133): Instantiated megafunction "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component" with the following parameter: File: E:/RIPTIDE-II_SDRAM/p_mem.v Line: 85
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
@@ -1716,14 +1716,14 @@ Info (12133): Instantiated megafunction "p_cache:p_cache_inst|p_mem:p_mem_inst|a
     Info (12134): Parameter "width_a" = "72"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jdg1.tdf
-    Info (12023): Found entity 1: altsyncram_jdg1 File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_jdg1 File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_jdg1" for hierarchy "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "d_cache" for hierarchy "d_cache:d_cache_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 124
-Info (12128): Elaborating entity "SDRAM_DP64_I" for hierarchy "SDRAM_DP64_I:SDRAM_controller" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 164
-Info (12128): Elaborating entity "PRG_ROM" for hierarchy "PRG_ROM:PRG_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 173
-Info (12128): Elaborating entity "altsyncram" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 81
-Info (12130): Elaborated megafunction instantiation "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 81
-Info (12133): Instantiated megafunction "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 81
+Info (12128): Elaborating entity "d_cache" for hierarchy "d_cache:d_cache_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 124
+Info (12128): Elaborating entity "SDRAM_DP64_I" for hierarchy "SDRAM_DP64_I:SDRAM_controller" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 164
+Info (12128): Elaborating entity "PRG_ROM" for hierarchy "PRG_ROM:PRG_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 173
+Info (12128): Elaborating entity "altsyncram" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 81
+Info (12130): Elaborated megafunction instantiation "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 81
+Info (12133): Instantiated megafunction "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" with the following parameter: File: E:/RIPTIDE-II_SDRAM/PRG_ROM.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1739,19 +1739,19 @@ Info (12133): Instantiated megafunction "PRG_ROM:PRG_inst|altsyncram:altsyncram_
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0bb1.tdf
-    Info (12023): Found entity 1: altsyncram_0bb1 File: D:/RIPTIDE-II_SDRAM/db/altsyncram_0bb1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_0bb1 File: E:/RIPTIDE-II_SDRAM/db/altsyncram_0bb1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_0bb1" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component|altsyncram_0bb1:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "MULTIPLEXED_HEX_DRIVER" for hierarchy "MULTIPLEXED_HEX_DRIVER:multi_hex" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 216
-Info (12128): Elaborating entity "hexdriver" for hierarchy "MULTIPLEXED_HEX_DRIVER:multi_hex|hexdriver:hex_inst_0" File: D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 4
-Info (12128): Elaborating entity "frame_clk" for hierarchy "MULTIPLEXED_HEX_DRIVER:multi_hex|frame_clk:frame_clk_inst" File: D:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 8
-Info (12128): Elaborating entity "serial" for hierarchy "serial:serial_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 234
-Info (12128): Elaborating entity "UART" for hierarchy "serial:serial_inst|UART:UART_inst" File: D:/RIPTIDE-II_SDRAM/serial.sv Line: 56
-Info (12128): Elaborating entity "MSC" for hierarchy "MSC:MSC_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 255
-Info (12128): Elaborating entity "VGA" for hierarchy "VGA:VGA_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 277
-Info (12128): Elaborating entity "VGA_RAM" for hierarchy "VGA:VGA_inst|VGA_RAM:RAM_VGA" File: D:/RIPTIDE-II_SDRAM/VGA.v Line: 34
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 97
-Info (12130): Elaborated megafunction instantiation "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 97
-Info (12133): Instantiated megafunction "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component" with the following parameter: File: D:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 97
+Info (12128): Elaborating entity "MULTIPLEXED_HEX_DRIVER" for hierarchy "MULTIPLEXED_HEX_DRIVER:multi_hex" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 216
+Info (12128): Elaborating entity "hexdriver" for hierarchy "MULTIPLEXED_HEX_DRIVER:multi_hex|hexdriver:hex_inst_0" File: E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 4
+Info (12128): Elaborating entity "frame_clk" for hierarchy "MULTIPLEXED_HEX_DRIVER:multi_hex|frame_clk:frame_clk_inst" File: E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv Line: 8
+Info (12128): Elaborating entity "serial" for hierarchy "serial:serial_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 234
+Info (12128): Elaborating entity "UART" for hierarchy "serial:serial_inst|UART:UART_inst" File: E:/RIPTIDE-II_SDRAM/serial.sv Line: 56
+Info (12128): Elaborating entity "MSC" for hierarchy "MSC:MSC_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 255
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:VGA_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 277
+Info (12128): Elaborating entity "VGA_RAM" for hierarchy "VGA:VGA_inst|VGA_RAM:RAM_VGA" File: E:/RIPTIDE-II_SDRAM/VGA.v Line: 34
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 97
+Info (12130): Elaborated megafunction instantiation "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 97
+Info (12133): Instantiated megafunction "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component" with the following parameter: File: E:/RIPTIDE-II_SDRAM/VGA_RAM.v Line: 97
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
@@ -1779,13 +1779,13 @@ Info (12133): Instantiated megafunction "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_60i2.tdf
-    Info (12023): Found entity 1: altsyncram_60i2 File: D:/RIPTIDE-II_SDRAM/db/altsyncram_60i2.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_60i2 File: E:/RIPTIDE-II_SDRAM/db/altsyncram_60i2.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_60i2" for hierarchy "VGA:VGA_inst|VGA_RAM:RAM_VGA|altsyncram:altsyncram_component|altsyncram_60i2:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "MC6847_gen3" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG" File: D:/RIPTIDE-II_SDRAM/VGA.v Line: 35
-Info (12128): Elaborating entity "CHR_ROM" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst" File: D:/RIPTIDE-II_SDRAM/MC6847_gen3.sv Line: 322
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 81
-Info (12130): Elaborated megafunction instantiation "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component" File: D:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 81
-Info (12133): Instantiated megafunction "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 81
+Info (12128): Elaborating entity "MC6847_gen3" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG" File: E:/RIPTIDE-II_SDRAM/VGA.v Line: 35
+Info (12128): Elaborating entity "CHR_ROM" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst" File: E:/RIPTIDE-II_SDRAM/MC6847_gen3.sv Line: 322
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 81
+Info (12130): Elaborated megafunction instantiation "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component" File: E:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 81
+Info (12133): Instantiated megafunction "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component" with the following parameter: File: E:/RIPTIDE-II_SDRAM/CHR_ROM.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1801,28 +1801,28 @@ Info (12133): Instantiated megafunction "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CH
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_57a1.tdf
-    Info (12023): Found entity 1: altsyncram_57a1 File: D:/RIPTIDE-II_SDRAM/db/altsyncram_57a1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_57a1 File: E:/RIPTIDE-II_SDRAM/db/altsyncram_57a1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_57a1" for hierarchy "VGA:VGA_inst|MC6847_gen3:VDG|CHR_ROM:CHR_inst|altsyncram:altsyncram_component|altsyncram_57a1:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "RIPTIDE_II" for hierarchy "RIPTIDE_II:CPU_inst" File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 296
-Info (12128): Elaborating entity "reg_file" for hierarchy "RIPTIDE_II:CPU_inst|reg_file:reg_file0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 367
-Info (12128): Elaborating entity "right_rotate" for hierarchy "RIPTIDE_II:CPU_inst|right_rotate:right_rotate0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 379
-Info (12128): Elaborating entity "mask_unit" for hierarchy "RIPTIDE_II:CPU_inst|mask_unit:mask0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 382
-Info (12128): Elaborating entity "ALU" for hierarchy "RIPTIDE_II:CPU_inst|ALU:ALU0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 395
-Info (12128): Elaborating entity "shift_merge" for hierarchy "RIPTIDE_II:CPU_inst|shift_merge:shift_merge0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 407
-Info (12128): Elaborating entity "PC" for hierarchy "RIPTIDE_II:CPU_inst|PC:PC0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 426
-Info (12128): Elaborating entity "call_stack" for hierarchy "RIPTIDE_II:CPU_inst|PC:PC0|call_stack:cstack0" File: D:/RIPTIDE-II_SDRAM/PC.v Line: 30
-Info (12128): Elaborating entity "decode_unit" for hierarchy "RIPTIDE_II:CPU_inst|decode_unit:decode_unit0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 462
-Info (12128): Elaborating entity "hazard_unit" for hierarchy "RIPTIDE_II:CPU_inst|hazard_unit:hazard_unit0" File: D:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 497
+Info (12128): Elaborating entity "RIPTIDE_II" for hierarchy "RIPTIDE_II:CPU_inst" File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 296
+Info (12128): Elaborating entity "reg_file" for hierarchy "RIPTIDE_II:CPU_inst|reg_file:reg_file0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 369
+Info (12128): Elaborating entity "right_rotate" for hierarchy "RIPTIDE_II:CPU_inst|right_rotate:right_rotate0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 381
+Info (12128): Elaborating entity "mask_unit" for hierarchy "RIPTIDE_II:CPU_inst|mask_unit:mask0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 384
+Info (12128): Elaborating entity "ALU" for hierarchy "RIPTIDE_II:CPU_inst|ALU:ALU0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 397
+Info (12128): Elaborating entity "shift_merge" for hierarchy "RIPTIDE_II:CPU_inst|shift_merge:shift_merge0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 409
+Info (12128): Elaborating entity "PC" for hierarchy "RIPTIDE_II:CPU_inst|PC:PC0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 428
+Info (12128): Elaborating entity "call_stack" for hierarchy "RIPTIDE_II:CPU_inst|PC:PC0|call_stack:cstack0" File: E:/RIPTIDE-II_SDRAM/PC.v Line: 30
+Info (12128): Elaborating entity "decode_unit" for hierarchy "RIPTIDE_II:CPU_inst|decode_unit:decode_unit0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 464
+Info (12128): Elaborating entity "hazard_unit" for hierarchy "RIPTIDE_II:CPU_inst|hazard_unit:hazard_unit0" File: E:/RIPTIDE-II_SDRAM/RIPTIDE_II.v Line: 499
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[69]" File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1554
-        Warning (14320): Synthesized away node "d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[70]" File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1576
-        Warning (14320): Synthesized away node "d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[71]" File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1598
-        Warning (14320): Synthesized away node "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[69]" File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1554
-        Warning (14320): Synthesized away node "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[70]" File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1576
-        Warning (14320): Synthesized away node "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[71]" File: D:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1598
+        Warning (14320): Synthesized away node "d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[69]" File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1554
+        Warning (14320): Synthesized away node "d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[70]" File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1576
+        Warning (14320): Synthesized away node "d_cache:d_cache_inst|p_mem:d_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[71]" File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1598
+        Warning (14320): Synthesized away node "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[69]" File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1554
+        Warning (14320): Synthesized away node "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[70]" File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1576
+        Warning (14320): Synthesized away node "p_cache:p_cache_inst|p_mem:p_mem_inst|altsyncram:altsyncram_component|altsyncram_jdg1:auto_generated|q_a[71]" File: E:/RIPTIDE-II_SDRAM/db/altsyncram_jdg1.tdf Line: 1598
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "RIPTIDE_II:CPU_inst|PC:PC0|call_stack:cstack0|stack_mem" is uninferred due to inappropriate RAM size File: D:/RIPTIDE-II_SDRAM/internal_mem.v Line: 22
+    Info (276004): RAM logic "RIPTIDE_II:CPU_inst|PC:PC0|call_stack:cstack0|stack_mem" is uninferred due to inappropriate RAM size File: E:/RIPTIDE-II_SDRAM/internal_mem.v Line: 22
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "RIPTIDE_II:CPU_inst|PC_I_field1_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
@@ -1838,48 +1838,48 @@ Info (12133): Instantiated megafunction "RIPTIDE_II:CPU_inst|altshift_taps:PC_I_
     Info (12134): Parameter "TAP_DISTANCE" = "4"
     Info (12134): Parameter "WIDTH" = "9"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_cmm.tdf
-    Info (12023): Found entity 1: shift_taps_cmm File: D:/RIPTIDE-II_SDRAM/db/shift_taps_cmm.tdf Line: 26
+    Info (12023): Found entity 1: shift_taps_cmm File: E:/RIPTIDE-II_SDRAM/db/shift_taps_cmm.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2b81.tdf
-    Info (12023): Found entity 1: altsyncram_2b81 File: D:/RIPTIDE-II_SDRAM/db/altsyncram_2b81.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_2b81 File: E:/RIPTIDE-II_SDRAM/db/altsyncram_2b81.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4pf.tdf
-    Info (12023): Found entity 1: cntr_4pf File: D:/RIPTIDE-II_SDRAM/db/cntr_4pf.tdf Line: 25
+    Info (12023): Found entity 1: cntr_4pf File: E:/RIPTIDE-II_SDRAM/db/cntr_4pf.tdf Line: 25
 Info (12130): Elaborated megafunction instantiation "RIPTIDE_II:CPU_inst|PC:PC0|altshift_taps:A_pipe1_rtl_0"
 Info (12133): Instantiated megafunction "RIPTIDE_II:CPU_inst|PC:PC0|altshift_taps:A_pipe1_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
     Info (12134): Parameter "TAP_DISTANCE" = "3"
     Info (12134): Parameter "WIDTH" = "16"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_ekm.tdf
-    Info (12023): Found entity 1: shift_taps_ekm File: D:/RIPTIDE-II_SDRAM/db/shift_taps_ekm.tdf Line: 30
+    Info (12023): Found entity 1: shift_taps_ekm File: E:/RIPTIDE-II_SDRAM/db/shift_taps_ekm.tdf Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1961.tdf
-    Info (12023): Found entity 1: altsyncram_1961 File: D:/RIPTIDE-II_SDRAM/db/altsyncram_1961.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_1961 File: E:/RIPTIDE-II_SDRAM/db/altsyncram_1961.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_24e.tdf
-    Info (12023): Found entity 1: add_sub_24e File: D:/RIPTIDE-II_SDRAM/db/add_sub_24e.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_24e File: E:/RIPTIDE-II_SDRAM/db/add_sub_24e.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6pf.tdf
-    Info (12023): Found entity 1: cntr_6pf File: D:/RIPTIDE-II_SDRAM/db/cntr_6pf.tdf Line: 24
+    Info (12023): Found entity 1: cntr_6pf File: E:/RIPTIDE-II_SDRAM/db/cntr_6pf.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ogc.tdf
-    Info (12023): Found entity 1: cmpr_ogc File: D:/RIPTIDE-II_SDRAM/db/cmpr_ogc.tdf Line: 22
+    Info (12023): Found entity 1: cmpr_ogc File: E:/RIPTIDE-II_SDRAM/db/cmpr_ogc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_p8h.tdf
-    Info (12023): Found entity 1: cntr_p8h File: D:/RIPTIDE-II_SDRAM/db/cntr_p8h.tdf Line: 25
-Info (13000): Registers with preset signals will power-up high File: D:/RIPTIDE-II_SDRAM/MSC.v Line: 47
+    Info (12023): Found entity 1: cntr_p8h File: E:/RIPTIDE-II_SDRAM/db/cntr_p8h.tdf Line: 25
+Info (13000): Registers with preset signals will power-up high File: E:/RIPTIDE-II_SDRAM/MSC.v Line: 47
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sdram_cke" is stuck at VCC File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 11
-    Warning (13410): Pin "sdram_cs_n" is stuck at GND File: D:/RIPTIDE-II_SDRAM/toplevel.v Line: 12
+    Warning (13410): Pin "sdram_cke" is stuck at VCC File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 11
+    Warning (13410): Pin "sdram_cs_n" is stuck at GND File: E:/RIPTIDE-II_SDRAM/toplevel.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/RIPTIDE-II_SDRAM/output_files/PVP.map.smsg
+Info (144001): Generated suppressed messages file E:/RIPTIDE-II_SDRAM/output_files/PVP.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2561 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2563 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 43 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 2299 logic cells
+    Info (21061): Implemented 2301 logic cells
     Info (21064): Implemented 195 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 696 megabytes
-    Info: Processing ended: Sat Apr 10 20:30:46 2021
+    Info: Peak virtual memory: 694 megabytes
+    Info: Processing ended: Thu May 06 20:59:05 2021
     Info: Elapsed time: 00:00:43
     Info: Total CPU time (on all processors): 00:01:24
 
@@ -1887,6 +1887,6 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/RIPTIDE-II_SDRAM/output_files/PVP.map.smsg.
+The suppressed messages can be found in E:/RIPTIDE-II_SDRAM/output_files/PVP.map.smsg.
 
 

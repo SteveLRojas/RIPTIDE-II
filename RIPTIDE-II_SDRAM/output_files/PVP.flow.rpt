@@ -1,5 +1,5 @@
 Flow report for PVP
-Sat Apr 10 20:31:41 2021
+Thu May 06 21:00:00 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Apr 10 20:31:41 2021       ;
+; Flow Status                        ; Successful - Thu May 06 21:00:00 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; PVP                                         ;
 ; Top-level Entity Name              ; PVP                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,963 / 6,272 ( 31 % )                      ;
-;     Total combinational functions  ; 1,695 / 6,272 ( 27 % )                      ;
+; Total logic elements               ; 1,960 / 6,272 ( 31 % )                      ;
+;     Total combinational functions  ; 1,697 / 6,272 ( 27 % )                      ;
 ;     Dedicated logic registers      ; 1,270 / 6,272 ( 20 % )                      ;
 ; Total registers                    ; 1270                                        ;
 ; Total pins                         ; 66 / 92 ( 72 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2021 20:30:05 ;
+; Start date & time ; 05/06/2021 20:58:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PVP                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 112938433068.161810820401608           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 112938433068.162035990203036           ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Testbench                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
@@ -117,7 +117,7 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; VGA_RAM.v                              ; --            ; --          ; Testbench      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Testbench                              ; --            ; --          ; Testbench      ;
 ; EDA_TEST_BENCH_NAME                  ; Testbench                              ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 700 us                                 ; --            ; --          ; Testbench      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1000 us                                ; --            ; --          ; Testbench      ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
@@ -146,11 +146,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 696 MB              ; 00:01:22                           ;
-; Fitter               ; 00:00:27     ; 1.3                     ; 1632 MB             ; 00:00:44                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 546 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.5                     ; 684 MB              ; 00:00:10                           ;
-; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 536 MB              ; 00:00:08                           ;
+; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 694 MB              ; 00:01:22                           ;
+; Fitter               ; 00:00:28     ; 1.3                     ; 1627 MB             ; 00:00:44                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 543 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.5                     ; 686 MB              ; 00:00:10                           ;
+; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 537 MB              ; 00:00:08                           ;
 ; Total                ; 00:01:27     ; --                      ; --                  ; 00:02:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
@@ -160,11 +160,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+-------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name     ; OS Version ; Processor type ;
 +----------------------+------------------+-------------+------------+----------------+
-; Analysis & Synthesis ; WIN-M8K78CFVA9V  ; Windows 8.1 ; 6.3        ; x86_64         ;
-; Fitter               ; WIN-M8K78CFVA9V  ; Windows 8.1 ; 6.3        ; x86_64         ;
-; Assembler            ; WIN-M8K78CFVA9V  ; Windows 8.1 ; 6.3        ; x86_64         ;
-; Timing Analyzer      ; WIN-M8K78CFVA9V  ; Windows 8.1 ; 6.3        ; x86_64         ;
-; EDA Netlist Writer   ; WIN-M8K78CFVA9V  ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Analysis & Synthesis ; WIN-H8JH7HJFPGD  ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Fitter               ; WIN-H8JH7HJFPGD  ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Assembler            ; WIN-H8JH7HJFPGD  ; Windows 8.1 ; 6.3        ; x86_64         ;
+; Timing Analyzer      ; WIN-H8JH7HJFPGD  ; Windows 8.1 ; 6.3        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-H8JH7HJFPGD  ; Windows 8.1 ; 6.3        ; x86_64         ;
 +----------------------+------------------+-------------+------------+----------------+
 
 

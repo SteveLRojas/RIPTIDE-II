@@ -131,3 +131,6 @@ All tests ran successfully in hardware, but simulation fails because SDRAM model
 
 Revision 8:
 Added logic to MSC so that it does not reset or flush the caches while a memory operation is in progress.
+Fixed bug in decoder module (incorrect logic for latch_wren_reg).
+Fixed bug in data cache (writes during memory fetch are not processed and must result in a miss).
+Performance fix in RIPTIDE_II (data reads dissabled during IO hazards to prevent false triggering of cache misses and IO module functions).

@@ -25,6 +25,8 @@ wire[15:0] sdram_dq;
 wire[11:0] init_address;
 wire[7:0] hex_low;
 wire[7:0] hex_high;
+wire[5:0] p1_page;
+wire[6:0] p2_page;
 
 //CPU external signals
 wire[15:0] PRG_address;
@@ -118,7 +120,11 @@ sdr sdram0(
 		.Cas_n(sdram_cas_n),
 		.We_n(sdram_wre_n),
 		.Dqm(sdram_dqm));
-		
+
+assign p1_page = PVP_inst.p1_page;
+assign p2_page = PVP_inst.p2_page;
+assign hex_low = PVP_inst.hex_low;
+assign hex_high = PVP_inst.hex_high;	
 assign init_address = PVP_inst.init_address;
 assign p1_address = PVP_inst.p1_address;
 assign p2_address = PVP_inst.p2_address;

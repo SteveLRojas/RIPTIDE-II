@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("D:/RIPTIDE-II_SDRAM/output_files/") File("PVP.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("E:/RIPTIDE-II_SDRAM/output_files/") File("PVP.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

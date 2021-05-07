@@ -58,7 +58,7 @@ assign mem_req = fetch_active & ~mem_ready;
 assign mem_address = write_active ? writeback_address : CPU_address_hold[15:3];
 assign d_miss = (mem_tag != CPU_tag) & (CPU_wren | CPU_ren);
 //assign d_cache_miss = d_miss | d_miss_hold | (CPU_wren_hold & CPU_ren);
-assign d_cache_miss = d_miss | d_miss_hold | (prev_cache_wren & CPU_ren);
+assign d_cache_miss = d_miss | d_miss_hold | (prev_cache_wren & CPU_ren) | (fetch_active & CPU_wren);
 assign mem_wren = write_active;
 assign mem_tag = tag_byte[3:0];
 assign mod_bit = tag_byte[4];
@@ -160,7 +160,7 @@ begin
 		cache_address = block_address_hold;
 	else
 		cache_address = block_address;
-	cache_wren = (fetch_active & ~write_active & mem_ready) | (CPU_wren_hold & ~(d_miss & ~mem_ready));	//CPU_wren_hols & ~mem_req
+	cache_wren = (fetch_active & ~write_active & mem_ready) | (CPU_wren_hold & ~(d_miss & ~mem_ready));	//CPU_wren_hold & ~mem_req
 	//cache wren is high when we are fetching from meory and memory is ready or when CPU is writing and we are not waiting on memory.
 end
 
