@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu May 06 20:59:34 2021
+Fitter Status : Successful - Tue Jul 13 21:24:17 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : PVP
 Top-level Entity Name : PVP
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 1,960 / 6,272 ( 31 % )
-    Total combinational functions : 1,697 / 6,272 ( 27 % )
-    Dedicated logic registers : 1,270 / 6,272 ( 20 % )
-Total registers : 1270
-Total pins : 66 / 92 ( 72 % )
+Total logic elements : 2,059 / 6,272 ( 33 % )
+    Total combinational functions : 1,786 / 6,272 ( 28 % )
+    Dedicated logic registers : 1,336 / 6,272 ( 21 % )
+Total registers : 1336
+Total pins : 70 / 92 ( 76 % )
 Total virtual pins : 0
 Total memory bits : 177,218 / 276,480 ( 64 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

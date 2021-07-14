@@ -37,7 +37,7 @@ Fixed possible bug in decode unit (latch_wren_reg undefined after reset).
 NOTE: fmax is limited by paths from cache memories to PC and data address output. It is not possible to add interrupts without further lowering the fmax or making major changes to the memory sytem and PC module.
 	Interrupts will not be implemented in the RIPTIDE-II processor.
 
-The PFGA board I was using for this project has multiple pins that are not working, at least one is needed for this design.
+The FPGA board I was using for this project has multiple pins that are not working, at least one is needed for this design.
 The project will be moved to a new board. Due to the SRAM requirements I may need to design a custom board.
 
 Revision 4:
@@ -134,3 +134,7 @@ Added logic to MSC so that it does not reset or flush the caches while a memory 
 Fixed bug in decoder module (incorrect logic for latch_wren_reg).
 Fixed bug in data cache (writes during memory fetch are not processed and must result in a miss).
 Performance fix in RIPTIDE_II (data reads dissabled during IO hazards to prevent false triggering of cache misses and IO module functions).
+Added ps2_host module.
+Created keyboard module.
+Updated top level to include new modules.
+Configured ROM with keyboard test program.

@@ -129,34 +129,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Testbench -section_id eda_simula
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 us" -section_id Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Testbench -section_id Testbench
-set_global_assignment -name SYSTEMVERILOG_FILE MULTIPLEXED_HEX_DRIVER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sdr_parameters.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sdr.sv
-set_global_assignment -name SDC_FILE SDC1.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE MC6847_gen3.sv
-set_global_assignment -name VERILOG_FILE VGA.v
-set_global_assignment -name SYSTEMVERILOG_FILE UART.sv
-set_global_assignment -name VERILOG_FILE toplevel.v
-set_global_assignment -name VERILOG_FILE testbench.v
-set_global_assignment -name VERILOG_FILE shift_merge.v
-set_global_assignment -name SYSTEMVERILOG_FILE serial.sv
-set_global_assignment -name VERILOG_FILE RIPTIDE_II.v
-set_global_assignment -name VERILOG_FILE right_rotate.v
-set_global_assignment -name VERILOG_FILE PC.v
-set_global_assignment -name VERILOG_FILE p_cache.v
-set_global_assignment -name VERILOG_FILE MSC.v
-set_global_assignment -name VERILOG_FILE mask_unit.v
-set_global_assignment -name VERILOG_FILE internal_mem.v
-set_global_assignment -name VERILOG_FILE hazard_unit.v
-set_global_assignment -name VERILOG_FILE decode_unit.v
-set_global_assignment -name VERILOG_FILE d_cache.v
-set_global_assignment -name VERILOG_FILE ALU.v
-set_global_assignment -name VERILOG_FILE SDRAM_DP64_I.v
-set_global_assignment -name QIP_FILE p_mem.qip
-set_global_assignment -name QIP_FILE PRG_ROM.qip
-set_global_assignment -name QIP_FILE VGA_RAM.qip
-set_global_assignment -name QIP_FILE CHR_ROM.qip
-set_global_assignment -name QIP_FILE PLL0.qip
 set_location_assignment PIN_124 -to hex_out[6]
 set_location_assignment PIN_126 -to hex_out[5]
 set_location_assignment PIN_132 -to hex_out[4]
@@ -202,4 +174,38 @@ set_global_assignment -name EDA_TEST_BENCH_FILE UART.sv -section_id Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE VGA.v -section_id Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE VGA_RAM.qip -section_id Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE VGA_RAM.v -section_id Testbench
+set_global_assignment -name SYSTEMVERILOG_FILE ps2_host.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MULTIPLEXED_HEX_DRIVER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sdr_parameters.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sdr.sv
+set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE MC6847_gen3.sv
+set_global_assignment -name VERILOG_FILE VGA.v
+set_global_assignment -name SYSTEMVERILOG_FILE UART.sv
+set_global_assignment -name VERILOG_FILE toplevel.v
+set_global_assignment -name VERILOG_FILE testbench.v
+set_global_assignment -name VERILOG_FILE shift_merge.v
+set_global_assignment -name SYSTEMVERILOG_FILE serial.sv
+set_global_assignment -name VERILOG_FILE RIPTIDE_II.v
+set_global_assignment -name VERILOG_FILE right_rotate.v
+set_global_assignment -name VERILOG_FILE PC.v
+set_global_assignment -name VERILOG_FILE p_cache.v
+set_global_assignment -name VERILOG_FILE MSC.v
+set_global_assignment -name VERILOG_FILE mask_unit.v
+set_global_assignment -name VERILOG_FILE internal_mem.v
+set_global_assignment -name VERILOG_FILE hazard_unit.v
+set_global_assignment -name VERILOG_FILE decode_unit.v
+set_global_assignment -name VERILOG_FILE d_cache.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE SDRAM_DP64_I.v
+set_global_assignment -name QIP_FILE p_mem.qip
+set_global_assignment -name QIP_FILE PRG_ROM.qip
+set_global_assignment -name QIP_FILE VGA_RAM.qip
+set_global_assignment -name QIP_FILE CHR_ROM.qip
+set_global_assignment -name QIP_FILE PLL0.qip
+set_global_assignment -name SYSTEMVERILOG_FILE keyboard.sv
+set_location_assignment PIN_119 -to ps2_clk_d
+set_location_assignment PIN_143 -to ps2_clk_q
+set_location_assignment PIN_120 -to ps2_data_d
+set_location_assignment PIN_144 -to ps2_data_q
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

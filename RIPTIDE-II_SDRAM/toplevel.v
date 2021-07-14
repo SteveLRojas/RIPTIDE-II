@@ -1,3 +1,33 @@
+//                     /\         /\__
+//                   // \       (  0 )_____/\            __
+//                  // \ \     (vv          o|          /^v\
+//                //    \ \   (vvvv  ___-----^        /^^/\vv\
+//              //  /     \ \ |vvvvv/               /^^/    \v\
+//             //  /       (\\/vvvv/              /^^/       \v\
+//            //  /  /  \ (  /vvvv/              /^^/---(     \v\
+//           //  /  /    \( /vvvv/----(O        /^^/           \v\
+//          //  /  /  \  (/vvvv/               /^^/             \v|
+//        //  /  /    \( vvvv/                /^^/               ||
+//       //  /  /    (  vvvv/                 |^^|              //
+//      //  / /    (  |vvvv|                  /^^/            //
+//     //  / /   (    \vvvvv\          )-----/^^/           //
+//    // / / (          \vvvvv\            /^^^/          //
+//   /// /(               \vvvvv\        /^^^^/          //
+//  ///(              )-----\vvvvv\    /^^^^/-----(      \\
+// //(                        \vvvvv\/^^^^/               \\
+///(                            \vvvv^^^/                 //
+//                                \vv^/         /        //
+//                                             /<______//
+//                                            <<<------/
+//                                             \<
+//                                              \
+//**************************************************
+//* Test platform for RIPTIDE-II processors.       *
+//* Copyright (C) 2020 Esteban Looser-Rojas.       *
+//* Instantiates the RIPTIDE-II CPU core along with*
+//* cache controllers, an SDRAM controller, display*
+//* controller, and input/output pripherals.       *
+//**************************************************
 module PVP(
 		input wire reset,
 		input wire clk,
@@ -6,6 +36,11 @@ module PVP(
 		
 		input wire RXD,
 		output wire TXD,
+		
+		input wire ps2_clk_d,
+		input wire ps2_data_d,
+		output wire ps2_clk_q,
+		output wire ps2_data_q,
 		
 		output wire sdram_clk,
 		output wire sdram_cke,
@@ -27,7 +62,8 @@ module PVP(
 
 //Address map for left bank:
 // 0x0000 to 0x0FFF video memory (read write)
-// 0x1000 to 0xFFF5	unused
+// 0x1000 to 0xFFF3	unused
+// 0xFFF4 to 0xFFF5 keyboard module (read write)
 // 0xFFF6 to 0xFFF7 video mode register (write only)
 // 0xFFF8 to 0xFFFB memory subsystem control registers	(write only)
 // 0xFFFC to 0xFFFD	HEX display registers	(write only)
@@ -54,6 +90,10 @@ module PVP(
 // 0x3 data space page register
 
 // RS-232 module address map
+// 0 data register
+// 1 status register
+
+// Keyboard module memory map
 // 0 data register
 // 1 status register
 
@@ -234,6 +274,26 @@ serial serial_inst(
 		.from_CPU(from_CPU_left));
 //#############################################################################
 
+//####### keyboard Module #####################################################
+wire keyboard_en;
+wire[7:0] from_keyboard;
+assign keyboard_en = (&data_address[15:4]) & ~data_address[3] & data_address[2] & ~data_address[1];	//0xFFF4 - 0xFFF5
+
+keyboard keyboard_inst(
+		.clk(clk_sys),
+		.reset(rst),
+		.A(data_address[0]),
+		.CE(keyboard_en),
+		.WREN(IO_wren),
+		.REN(IO_ren),
+		.ps2_data_d(ps2_data_d),
+		.ps2_clk_d(ps2_clk_d),
+		.ps2_data_q(ps2_data_q),
+		.ps2_clk_q(ps2_clk_q),
+		.to_CPU(from_keyboard),
+		.from_CPU(from_CPU_left));
+//#############################################################################
+
 //####### Memory Subsystem Control ############################################
 wire MSC_en;
 assign MSC_en = &data_address[15:3] && ~data_address[2] && IO_wren;
@@ -277,7 +337,7 @@ VGA VGA_inst(
         .HSYNC(HSYNC), .VSYNC(VSYNC));
 //#############################################################################
 
-assign to_CPU_left = VGA_En ? from_VGA : from_serial;
+assign to_CPU_left = VGA_En ? from_VGA : (keyboard_en ? from_keyboard : from_serial);
 
 RIPTIDE_II CPU_inst(
 		.clk(clk_sys),

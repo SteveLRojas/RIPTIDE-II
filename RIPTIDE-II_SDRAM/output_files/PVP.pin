@@ -186,8 +186,8 @@ RXD                          : 115       : input  : 3.3-V LVCMOS      :         
 VCCINT                       : 116       : power  :                   : 1.2V    :           :                
 VCCIO7                       : 117       : power  :                   : 3.3V    : 7         :                
 GND                          : 118       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 119       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 120       :        :                   :         : 7         :                
+ps2_clk_d                    : 119       : input  : 3.3-V LVCMOS      :         : 7         : Y              
+ps2_data_d                   : 120       : input  : 3.3-V LVCMOS      :         : 7         : Y              
 hex_out[1]                   : 121       : output : 3.3-V LVCMOS      :         : 7         : Y              
 VCCIO7                       : 122       : power  :                   : 3.3V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
@@ -210,6 +210,6 @@ VCCIO8                       : 139       : power  :                   : 3.3V    
 GND                          : 140       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 142       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 8         :                
+ps2_clk_q                    : 143       : output : 3.3-V LVCMOS      :         : 8         : Y              
+ps2_data_q                   : 144       : output : 3.3-V LVCMOS      :         : 8         : Y              
 GND                          : EPAD      :        :                   :         :           :                
