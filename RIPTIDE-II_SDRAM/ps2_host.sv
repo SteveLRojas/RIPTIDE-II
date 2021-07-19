@@ -45,7 +45,7 @@ begin
 		rx_data <= 8'h00;
 		rx_ready <= 1'b0;
 	end
-	else if(rx_ready | rx_inhibit)
+	else if(rx_shift_reg[0] | rx_inhibit)
 	begin
 		rx_shift_reg <= 12'b100000000000;
 	end

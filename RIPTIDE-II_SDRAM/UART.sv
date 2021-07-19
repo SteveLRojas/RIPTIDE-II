@@ -23,6 +23,12 @@ assign tx_time = (tx_timer == 9'd434);	//115200 baud at 50MHz system clock.
 assign rx_time = (rx_timer == 9'd434);
 assign tx = tx_frame[0];
 
+initial
+begin
+	rx_s = 1'b1;
+	rx_frame = 10'b1111111111;
+end
+
 always @(posedge clk)
 begin
 	rx_s <= rx;
@@ -58,7 +64,7 @@ begin
 		end
 		if(~rx_s)	//detect start bit
 			rx_active <= 1'b1;
-		if(~rx_frame[0])
+		if(~rx_frame[0] & rx_active)
 		begin
 			rx_active <= 1'b0;
 			rx_ready <= 1'b1;

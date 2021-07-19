@@ -138,3 +138,7 @@ Added ps2_host module.
 Created keyboard module.
 Updated top level to include new modules.
 Configured ROM with keyboard test program.
+Fixed bug in UART module (rx_ready held high for 2 cycles).
+Modified serial module to include 8 byte RX and TX buffers.
+Modified keyboard module to include 8 byte RX and TX buffers.
+Fixed bug in ps2_host module (rx_ready held high for 2 cycles).
