@@ -142,3 +142,12 @@ Fixed bug in UART module (rx_ready held high for 2 cycles).
 Modified serial module to include 8 byte RX and TX buffers.
 Modified keyboard module to include 8 byte RX and TX buffers.
 Fixed bug in ps2_host module (rx_ready held high for 2 cycles).
+
+Revision 9:
+Created timer module.
+Updated top level to include timer module.
+Rewrote IO multiplexer section.
+Cleaned up top level.
+Found bug in PC? (RET instruction returns to the wrong address (one higher than expected)).
+	Simulation shows that the wrong address is pushed onto the call stack.
+	Fixed bug in PC (address pipeline must stall on data_hazard).

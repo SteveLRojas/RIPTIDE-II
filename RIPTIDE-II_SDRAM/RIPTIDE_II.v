@@ -20,7 +20,6 @@ reg HALT;
 reg[7:0] IV_in;
 reg SC1, SC2, SC3, SC4, SC5, SC6, SC7;
 reg WC1, WC2, WC3, WC4, WC5, WC6, WC7;
-//reg WC_hold;
 reg n_LB_w1, n_LB_w2, n_LB_w3, n_LB_w4, n_LB_w5, n_LB_w6, n_LB_w7;
 reg latch_wren1, latch_wren2, latch_wren3, latch_wren4, latch_wren5;
 reg[1:0] latch_address_w1, latch_address_w2, latch_address_w3, latch_address_w4, latch_address_w5;
@@ -161,61 +160,61 @@ begin
 	begin	//not reset
 		if(pipeline_flush)
 		begin
-		SC1 <= 1'b0;
-		SC2 <= 1'b0;
-		SC3 <= 1'b0;
-		SC4 <= 1'b0;
-		WC1 <= 1'b0;
-		WC2 <= 1'b0;
-		WC3 <= 1'b0;
-		WC4 <= 1'b0;
-		n_LB_w1 <= 1'b0;
-		n_LB_w2 <= 1'b0;
-		n_LB_w3 <= 1'b0;
-		n_LB_w4 <= 1'b0;
-		latch_wren1 <= 1'b0;
-		latch_wren2 <= 1'b0;
-		latch_wren3 <= 1'b0;
-		latch_wren4 <= 1'b0;
-		regf_wren1 <= 1'b0;
-		regf_wren2 <= 1'b0;
-		regf_wren3 <= 1'b0;
-		regf_wren4 <= 1'b0;
-		rotate_S01 <= 3'h0;
-		rotate_R1 <= 3'h0;
-		rotate_source1 <= 1'b0;
-		rotate_mux1 <= 1'b0;
-		mask_L1 <= 3'h0;
-		mask_L2 <= 3'h0;
-		alu_op1 <= 3'h0;
-		alu_op2 <= 3'h0;
-		alu_op3 <= 3'h0;
-		alu_I_field1 <= 8'h0;
-		alu_I_field2 <= 8'h0;
-		alu_I_field3 <= 8'h0;
-		alu_mux1 <= 1'b0;
-		alu_mux2 <= 1'b0;
-		alu_mux3 <= 1'b0;
-		merge_D01 <= 3'h0;
-		merge_D02 <= 3'h0;
-		merge_D03 <= 3'h0;
-		merge_D04 <= 3'h0;
-		shift_L1 <= 3'h0;
-		shift_L2 <= 3'h0;
-		shift_L3 <= 3'h0;
-		shift_L4 <= 3'h0;
-		NZT1 <= 1'b0;
-		NZT2 <= 1'b0;
-		NZT3 <= 1'b0;
-		NZT4 <= 1'b0;
-		XEC1 <= 1'b0;
-		XEC2 <= 1'b0;
-		XEC3 <= 1'b0;
-		XEC4 <= 1'b0;
-		CALL1 <= 1'b0;
-		CALL2 <= 1'b0;
-		CALL3 <= 1'b0;
-		CALL4 <= 1'b0;
+			SC1 <= 1'b0;
+			SC2 <= 1'b0;
+			SC3 <= 1'b0;
+			SC4 <= 1'b0;
+			WC1 <= 1'b0;
+			WC2 <= 1'b0;
+			WC3 <= 1'b0;
+			WC4 <= 1'b0;
+			n_LB_w1 <= 1'b0;
+			n_LB_w2 <= 1'b0;
+			n_LB_w3 <= 1'b0;
+			n_LB_w4 <= 1'b0;
+			latch_wren1 <= 1'b0;
+			latch_wren2 <= 1'b0;
+			latch_wren3 <= 1'b0;
+			latch_wren4 <= 1'b0;
+			regf_wren1 <= 1'b0;
+			regf_wren2 <= 1'b0;
+			regf_wren3 <= 1'b0;
+			regf_wren4 <= 1'b0;
+			rotate_S01 <= 3'h0;
+			rotate_R1 <= 3'h0;
+			rotate_source1 <= 1'b0;
+			rotate_mux1 <= 1'b0;
+			mask_L1 <= 3'h0;
+			mask_L2 <= 3'h0;
+			alu_op1 <= 3'h0;
+			alu_op2 <= 3'h0;
+			alu_op3 <= 3'h0;
+			alu_I_field1 <= 8'h0;
+			alu_I_field2 <= 8'h0;
+			alu_I_field3 <= 8'h0;
+			alu_mux1 <= 1'b0;
+			alu_mux2 <= 1'b0;
+			alu_mux3 <= 1'b0;
+			merge_D01 <= 3'h0;
+			merge_D02 <= 3'h0;
+			merge_D03 <= 3'h0;
+			merge_D04 <= 3'h0;
+			shift_L1 <= 3'h0;
+			shift_L2 <= 3'h0;
+			shift_L3 <= 3'h0;
+			shift_L4 <= 3'h0;
+			NZT1 <= 1'b0;
+			NZT2 <= 1'b0;
+			NZT3 <= 1'b0;
+			NZT4 <= 1'b0;
+			XEC1 <= 1'b0;
+			XEC2 <= 1'b0;
+			XEC3 <= 1'b0;
+			XEC4 <= 1'b0;
+			CALL1 <= 1'b0;
+			CALL2 <= 1'b0;
+			CALL3 <= 1'b0;
+			CALL4 <= 1'b0;
 		end
 		else
 		begin	//not flush
@@ -335,9 +334,9 @@ begin
 		regf_wren5 <= regf_wren4;
 		merge_D05 <= merge_D04;
 		PC_I_field1 <= PC_I_field[7:0];
-        PC_I_field2 <= PC_I_field1;
-        PC_I_field3 <= PC_I_field2;
-        PC_I_field4 <= PC_I_field3;
+		PC_I_field2 <= PC_I_field1;
+		PC_I_field3 <= PC_I_field2;
+		PC_I_field4 <= PC_I_field3;
 	end
 end
 
@@ -417,12 +416,14 @@ PC PC0(
 		.CALL4(CALL4),
 		.RET(RET),
 		.RST(RST),
+		//.decoder_RST(decoder_RST),
 		.ALU_NZ(NZ),
 		.hazard(hazard),
+		.data_hazard(data_hazard),
 		.branch_hazard(branch_hazard),
 		.p_cache_miss(p_cache_miss),
 		.long_I(long_I4),
-		.ALU_data(alu_out),   //forwarding paths not used for jumps
+		.ALU_data(alu_out),
 		.PC_I_field(PC_I_field),
 		.PC_I_field4(PC_I_field4),
 		.A(A));

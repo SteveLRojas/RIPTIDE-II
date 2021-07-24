@@ -5,9 +5,11 @@ module PC(
 		input wire JMP,
 		input wire CALL4,
 		input wire RET,
+		//input wire decoder_RST,
 		input wire RST,
 		input wire ALU_NZ,
 		input wire hazard,
+		input wire data_hazard,
 		input wire branch_hazard,
 		input wire p_cache_miss,
 		input wire long_I,
@@ -31,10 +33,6 @@ call_stack cstack0(.rst(RST), .clk(clk), .push(CALL4), .pop(stack_pop), .data_in
 always @(posedge clk)
 begin
 	A_next_I <= A_reg;
-//	PC_I_field1 <= PC_I_field[7:0];
-//	PC_I_field2 <= PC_I_field1;
-//	PC_I_field3 <= PC_I_field2;
-//	PC_I_field4 <= PC_I_field3;
 end
 always @(posedge clk or posedge RST)	//reset needs not be asynchronous, but doing this eliminates a mux and improves timing.
 begin
@@ -53,26 +51,37 @@ begin
 	end
 	else
 	begin
-	   prev_p_cache_miss <= p_cache_miss;
+		prev_p_cache_miss <= p_cache_miss;
 		if(~p_cache_miss)
-		begin
-			prev_hazard <= hazard;
 			A_miss <= A_reg;
-		end
-		if(hazard && ~prev_hazard)
-			A_current_I_alternate <= A_next_I;
-		if(~hazard)
+			
+//		if(decoder_RST)
+//			prev_hazard <= 1'b0;
+//		else
+//		begin
+			if(~p_cache_miss)
+			begin
+				prev_hazard <= hazard;
+			end
+			if(hazard && ~prev_hazard)
+				A_current_I_alternate <= A_next_I;
+			if(~hazard)
+			begin
+				if(prev_hazard)
+					A_current_I <= A_current_I_alternate;
+				else
+					A_current_I <= A_next_I;
+				A_pipe0 <= A_current_I;
+			end
+		//end
+		
+		if(~data_hazard)
 		begin
-			if(prev_hazard)
-				A_current_I <= A_current_I_alternate;
-			else
-				A_current_I <= A_next_I;
-			A_pipe0 <= A_current_I;
+			A_pipe1 <= A_pipe0;
+			A_pipe2 <= A_pipe1;
+			A_pipe3 <= A_pipe2;
+			A_pipe4 <= A_pipe3;
 		end
-		A_pipe1 <= A_pipe0;
-		A_pipe2 <= A_pipe1;
-		A_pipe3 <= A_pipe2;
-		A_pipe4 <= A_pipe3;
 	end
 end
 

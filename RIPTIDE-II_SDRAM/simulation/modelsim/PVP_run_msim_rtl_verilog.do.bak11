@@ -26,10 +26,13 @@ vlog -vlog01compat -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/V
 vlog -vlog01compat -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/CHR_ROM.v}
 vlog -vlog01compat -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/PLL0.v}
 vlog -vlog01compat -work work +incdir+E:/RIPTIDE-II_SDRAM/db {E:/RIPTIDE-II_SDRAM/db/pll0_altpll.v}
+vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/timer.sv}
+vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/ps2_host.sv}
 vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/MULTIPLEXED_HEX_DRIVER.sv}
 vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/MC6847_gen3.sv}
 vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/UART.sv}
 vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/serial.sv}
+vlog -sv -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/keyboard.sv}
 
 vlog -vlog01compat -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/ALU.v}
 vlog -vlog01compat -work work +incdir+E:/RIPTIDE-II_SDRAM {E:/RIPTIDE-II_SDRAM/CHR_ROM.v}

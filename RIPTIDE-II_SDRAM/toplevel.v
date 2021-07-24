@@ -61,11 +61,12 @@ module PVP(
 		);
 
 //Address map for left bank:
-// 0x0000 to 0x0FFF video memory (read write)
-// 0x1000 to 0xFFF3	unused
-// 0xFFF4 to 0xFFF5 keyboard module (read write)
-// 0xFFF6 to 0xFFF7 video mode register (write only)
-// 0xFFF8 to 0xFFFB memory subsystem control registers	(write only)
+// 0x0000 to 0x0FFF	video memory (read write)
+// 0x1000 to 0xFFEF	unused
+// 0xFFF0 to 0xFFF3	timer module
+// 0xFFF4 to 0xFFF5	keyboard module (read write)
+// 0xFFF6 to 0xFFF7	video mode register (write only)
+// 0xFFF8 to 0xFFFB	memory subsystem control registers	(write only)
 // 0xFFFC to 0xFFFD	HEX display registers	(write only)
 // 0xFFFE to 0xFFFF	RS-232 module	(read write)
 
@@ -97,14 +98,63 @@ module PVP(
 // 0 data register
 // 1 status register
 
-reg[3:0] button_s;
-reg rst;
-
 //####### PLL #################################################################
 wire clk_25;
 wire clk_sys;
 PLL0 PLL_inst(.inclk0(clk), .c0(clk_25), .c1(clk_sys), .c2(sdram_clk));
 //#############################################################################
+
+//####### IO Control #########################################################
+wire[15:0] data_address;
+wire[7:0] from_CPU_left;
+wire[7:0] to_CPU_left;
+wire IO_WC;
+wire IO_RC;
+wire IO_n_LB_w;
+wire IO_n_LB_r;
+wire IO_wren;
+wire IO_ren;
+assign IO_wren = (~IO_n_LB_w & IO_WC);
+assign IO_ren = (~IO_n_LB_r & IO_RC);
+
+reg[3:0] button_s;
+reg rst;
+reg[7:0] hex_low;
+reg[7:0] hex_high;
+
+always @(posedge clk_sys)
+begin
+	button_s <= ~button;
+	rst <= ~reset;
+end
+
+always @(posedge clk_sys or posedge rst)
+begin
+	if(rst)
+	begin
+		hex_low <= 8'h00;
+		hex_high <= 8'h00;
+	end
+	else
+	begin
+		if(&data_address[15:2] && ~data_address[1] && ~data_address[0] && IO_wren)
+			hex_low <= from_CPU_left[7:0];
+		if(&data_address[15:2] && ~data_address[1] && data_address[0] && IO_wren)
+			hex_high <= from_CPU_left[7:0];
+	end
+end
+
+MULTIPLEXED_HEX_DRIVER multi_hex(
+			.Clk(clk_sys),
+			.SEG0(hex_low[3:0]),
+			.SEG1(hex_low[7:4]),
+			.SEG2(hex_high[3:0]),
+			.SEG3(hex_high[7:4]),
+			.SEG_SEL(seg_sel),
+			.HEX_OUT(hex_out));
+//#############################################################################
+
+//####### Program Cache #######################################################
 wire p_cache_miss;
 wire[15:0] PRG_address;
 wire[15:0] PRG_data;
@@ -126,13 +176,10 @@ p_cache p_cache_inst(
 		.mem_ready(p1_ready),
 		.p_reset_active(LED[3]),
 		.p_fetch_active(LED[2]));
-		
+//#############################################################################
+
+//####### Data Cache ##########################################################
 wire d_cache_miss;
-wire IO_WC;
-wire IO_RC;
-wire IO_n_LB_w;
-wire IO_n_LB_r;
-wire[15:0] data_address;
 wire[7:0] to_CPU_right;
 wire[7:0] from_CPU_right;
 wire[12:0] p2_address;
@@ -162,7 +209,9 @@ d_cache d_cache_inst(
 		.mem_ready(p2_ready),
 		.d_reset_active(LED[1]),
 		.d_fetch_active(LED[0]));
+//#############################################################################
 
+//####### Main Memory #########################################################
 wire[5:0] p1_page;
 wire[6:0] p2_page;
 wire init_req;
@@ -202,6 +251,7 @@ SDRAM_DP64_I SDRAM_controller(
 		.init_ready(init_ready),
 		.init_address(init_address),
 		.init_data(init_data));
+//#############################################################################
 		
 //####### ROM #################################################################
 reg ROM_ready;
@@ -213,53 +263,10 @@ assign init_ready = ROM_ready;
 	PRG_ROM PRG_inst(.address(init_address[11:0]), .clock(clk_sys), .q(init_data));
 //############################################################################
 
-wire[7:0] from_CPU_left;
-wire[7:0] to_CPU_left;
-wire IO_wren;
-wire IO_ren;
-assign IO_wren = (~IO_n_LB_w & IO_WC);
-assign IO_ren = (~IO_n_LB_r & IO_RC);
-
-//####### IO Control #########################################################
-reg[7:0] hex_low;
-reg[7:0] hex_high;
-
-always @(posedge clk_sys)
-begin
-	button_s <= ~button;
-	rst <= ~reset;
-end
-
-always @(posedge clk_sys or posedge rst)
-begin
-	if(rst)
-	begin
-		hex_low <= 8'h00;
-		hex_high <= 8'h00;
-	end
-	else
-	begin
-		if(&data_address[15:2] && ~data_address[1] && ~data_address[0] && IO_wren)
-			hex_low <= from_CPU_left[7:0];
-		if(&data_address[15:2] && ~data_address[1] && data_address[0] && IO_wren)
-			hex_high <= from_CPU_left[7:0];
-	end
-end
-
-MULTIPLEXED_HEX_DRIVER multi_hex(
-			.Clk(clk_sys),
-			.SEG0(hex_low[3:0]),
-			.SEG1(hex_low[7:4]),
-			.SEG2(hex_high[3:0]),
-			.SEG3(hex_high[7:4]),
-			.SEG_SEL(seg_sel),
-			.HEX_OUT(hex_out));
-//#############################################################################
-
 //####### Serial Module #######################################################
 wire serial_en;
 wire[7:0] from_serial;
-assign serial_en = &data_address[15:1];
+assign serial_en = &data_address[15:1];	//0xFFFE - 0xFFFF
 
 serial serial_inst(
 		.clk(clk_sys),
@@ -292,6 +299,24 @@ keyboard keyboard_inst(
 		.ps2_clk_q(ps2_clk_q),
 		.to_CPU(from_keyboard),
 		.from_CPU(from_CPU_left));
+//#############################################################################
+
+//####### Timer Module ########################################################
+wire timer_en;
+wire[7:0] from_timer;
+assign timer_en = (&data_address[15:4]) & ~data_address[3] & ~data_address[2];
+
+timer timer_inst(
+		.clk(clk_sys),
+		.rst(rst),
+		.ce(serial_en),
+		.wren(IO_wren),
+		.ren(IO_ren),
+		.hsync(HSYNC),
+		.vsync(VSYNC),
+		.addr(data_address[1:0]),
+		.from_cpu(from_CPU_left),
+		.to_cpu(from_timer));
 //#############################################################################
 
 //####### Memory Subsystem Control ############################################
@@ -337,8 +362,34 @@ VGA VGA_inst(
         .HSYNC(HSYNC), .VSYNC(VSYNC));
 //#############################################################################
 
-assign to_CPU_left = VGA_En ? from_VGA : (keyboard_en ? from_keyboard : from_serial);
+//####### IO Multiplexer ######################################################
+reg prev_VGA_en;
+reg prev_keyboard_en;
+reg prev_serial_en;
+reg prev_timer_en;
 
+always @(posedge clk_sys)
+begin
+	prev_VGA_en <= VGA_En;
+	prev_keyboard_en <= keyboard_en;
+	prev_serial_en <= serial_en;
+	prev_timer_en <= timer_en;
+end
+
+wire[7:0] m_from_VGA;
+wire[7:0] m_from_keyboard;
+wire[7:0] m_from_serial;
+wire[7:0] m_from_timer;
+
+assign m_from_VGA = from_VGA & {8{prev_VGA_en}};
+assign m_from_keyboard = from_keyboard & {8{prev_keyboard_en}};
+assign m_from_serial = from_serial & {8{prev_serial_en}};
+assign m_from_timer = from_timer & {8{prev_timer_en}};
+assign to_CPU_left = m_from_VGA | m_from_keyboard | m_from_serial | m_from_timer;
+//#############################################################################
+
+//assign to_CPU_left = VGA_En ? from_VGA : (keyboard_en ? from_keyboard : from_serial);
+//####### CPU Core ############################################################
 RIPTIDE_II CPU_inst(
 		.clk(clk_sys),
 		.n_halt(~button_s[0]),
@@ -354,4 +405,5 @@ RIPTIDE_II CPU_inst(
 		.IO_RC(IO_RC),
 		.IO_n_LB_w(IO_n_LB_w),
 		.IO_n_LB_r(IO_n_LB_r));
+//#############################################################################
 endmodule
