@@ -84,7 +84,8 @@ wire branch_hazard;
 wire pipeline_flush;
 
 assign IO_WC = WC6;
-assign IO_RC = RC & ~(SC1 | SC2 | SC3 | SC4 | SC5 | SC6 | SC7);	//no IO read during IO hazard to prevent false cache misses.
+//no IO read during IO hazard to prevent false cache misses (Assuming all IO registers are read only or write only or cached).
+assign IO_RC = RC & ~(SC1 | SC2 | SC3 | SC4 | SC5 | SC6 | SC7);
 assign IO_n_LB_w = n_LB_w6;
 assign IO_n_LB_r = n_LB_r;
 
@@ -484,6 +485,7 @@ hazard_unit hazard_unit0(
 		.regf_wren_reg1(regf_wren1), .regf_wren_reg2(regf_wren2), .regf_wren_reg3(regf_wren3), .regf_wren_reg4(regf_wren4), .regf_wren_reg5(regf_wren5),
 		.SC_reg1(SC1), .SC_reg2(SC2), .SC_reg3(SC3), .SC_reg4(SC4), .SC_reg5(SC5), .SC_reg6(SC6), .SC_reg7(SC7),
 		.WC_reg1(WC1), .WC_reg2(WC2), .WC_reg3(WC3), .WC_reg4(WC4), .WC_reg5(WC5), .WC_reg6(WC6), .WC_reg7(WC7),
+		.RC_reg(RC),
 		.n_LB_w_reg1(n_LB_w1), .n_LB_w_reg2(n_LB_w2), .n_LB_w_reg3(n_LB_w3), .n_LB_w_reg4(n_LB_w4), .n_LB_w_reg5(n_LB_w5), .n_LB_w_reg6(n_LB_w6), .n_LB_w_reg7(n_LB_w7),
 		.n_LB_r(n_LB_r),
 		.rotate_mux(rotate_mux),

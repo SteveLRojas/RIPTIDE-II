@@ -1,4 +1,5 @@
 module timer(input logic clk, rst, ce, wren, ren, hsync, vsync, input logic[1:0] addr, input logic[7:0] from_cpu, output logic[7:0] to_cpu);
+//NOTE: the hsync and vsync inputs are active low.
 logic[23:0] counter;
 logic[5:0] status;
 logic[2:0] count_nz;

@@ -151,3 +151,11 @@ Cleaned up top level.
 Found bug in PC? (RET instruction returns to the wrong address (one higher than expected)).
 	Simulation shows that the wrong address is pushed onto the call stack.
 	Fixed bug in PC (address pipeline must stall on data_hazard).
+Fixed bug in timer port connections on top level.
+Found bug in decoder (incorrect RC output for instruction 78 20	XOR	RIV0 1 R0).
+	Simulation shows that rotate_mux_reg is generated incorrectly (the correct value is 0).
+	The rotate_mux signal should not matter when the data source is the IV bus, but it is used to generate the RC signal.
+	Added separate logic for RC signal and left rotate_mux unchanged.
+	Modified hazard unit to use the RC signal instead of inferring it from rotate_source and rotate_mux.
+Fixed performance issue in decoder (XMIT and JMP set rotate_source to avoid regf hazards).
+Fixed bug in MC6847_gen3 (vertical counters increment at start of horizontal blank and not when col_count overflows).

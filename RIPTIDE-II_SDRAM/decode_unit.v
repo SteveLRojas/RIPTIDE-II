@@ -44,6 +44,7 @@ reg RET;
 reg regf_wren_reg;
 reg SC_reg;
 reg WC_reg;
+reg RC_reg;
 reg[2:0] alu_op_reg;
 reg n_LB_w_reg;
 reg n_LB_r_reg;
@@ -99,6 +100,7 @@ begin
 		regf_wren_reg <= 1'b0;
 		SC_reg <= 1'b0;
 		WC_reg <= 1'b0;
+		RC_reg <= 1'b0;
 		alu_op_reg <= 0;
 		rotate_source_reg <= 1'b0;
 		rotate_mux_reg <= 1'b0;
@@ -118,18 +120,20 @@ begin
 			n_LB_r_reg <= I_reg[11];
 			JMP <= 1'b0;
 			
-			if(((I_reg[4:3] == 2'b00 && I_reg[2:0] != 3'h7) || (I_reg[4:3] == 2'b01 && I_reg[2:0] == 3'b001)) & ~(((I_reg[7:5] != 3'h0) | (I_reg[12:8] != I_reg[4:0]))))	//if NOP
+			case(I_reg[11])
+			1'b0: rotate_mux_reg <= 1'b0;
+			1'b1: rotate_mux_reg <= ~I_reg[8];
+			endcase
+			if(((I_reg[4:3] == 2'b00 && I_reg[2:0] != 3'h7) || (I_reg[4:3] == 2'b01 && I_reg[2:0] == 3'b001)) & (I_reg[7:5] == 3'h0) & (I_reg[12:8] == I_reg[4:0]))	//if NOP
 			begin
-				rotate_mux_reg <= 1'b1;
+				//rotate_mux_reg <= 1'b1;	//is this really needed?
 				rotate_source_reg <= 1'b1;
+				RC_reg <= 1'b0;
 			end
 			else
 			begin
-				case(I_reg[11])
-				1'b0: rotate_mux_reg <= 1'b0;
-				1'b1: rotate_mux_reg <= ~I_reg[8];
-				endcase
 				rotate_source_reg <= I_reg[12];
+				RC_reg <= I_reg[12];
 			end
 			
 			case(I_reg[4])
@@ -169,7 +173,6 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
 			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
@@ -190,6 +193,7 @@ begin
 			1'b1: rotate_mux_reg <= ~I_reg[8];
 			endcase
 			rotate_source_reg <= I_reg[12];
+			RC_reg <= I_reg[12];
 			case(I_reg[4])
 			1'b0: rotate_R_reg <= I_reg[7:5];
 			1'b1: rotate_R_reg <= 3'b000;
@@ -227,7 +231,6 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
 			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
@@ -248,6 +251,7 @@ begin
 			1'b1: rotate_mux_reg <= ~I_reg[8];
 			endcase
 			rotate_source_reg <= I_reg[12];
+			RC_reg <= I_reg[12];
 			case(I_reg[4])
 			1'b0: rotate_R_reg <= I_reg[7:5];
 			1'b1: rotate_R_reg <= 3'b000;
@@ -285,7 +289,6 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
 			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
@@ -306,6 +309,7 @@ begin
 			1'b1: rotate_mux_reg <= ~I_reg[8];
 			endcase
 			rotate_source_reg <= I_reg[12];
+			RC_reg <= I_reg[12];
 			case(I_reg[4])
 			1'b0: rotate_R_reg <= I_reg[7:5];
 			1'b1: rotate_R_reg <= 3'b000;
@@ -343,7 +347,6 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[3];
-			//if((I_reg[4:3] != 2'b00) || (I_reg[2:0] == 3'h7))
 			if(I_reg[4] || (I_reg[2:0] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
@@ -364,6 +367,7 @@ begin
 			1'b1: rotate_mux_reg <= ~I_reg[8];
 			endcase
 			rotate_source_reg <= I_reg[12];
+			RC_reg <= I_reg[12];
 			rotate_R_reg <= 3'b000;
 			rotate_S0_reg <= I_reg[10:8];
 			
@@ -409,6 +413,7 @@ begin
 			1'b1: rotate_mux_reg <= ~I_reg[8];
 			endcase
 			rotate_source_reg <= I_reg[12];
+			RC_reg <= I_reg[12];
 			rotate_R_reg <= 3'b000;
 			rotate_S0_reg <= I_reg[10:8];
 			
@@ -449,8 +454,13 @@ begin
 			n_LB_r_reg <= I_reg[11];
 			JMP <= 1'b0;
 			
-			rotate_mux_reg <= 1'b1;
-			rotate_source_reg <= I_reg[12];
+			//rotate_mux_reg <= 1'b1;
+			case(I_reg[11])
+			1'b0: rotate_mux_reg <= 1'b0;
+			1'b1: rotate_mux_reg <= ~I_reg[8];
+			endcase
+			rotate_source_reg <= 1'b1;
+			RC_reg <= 1'b0;
 			rotate_R_reg <= 3'b000;
 			rotate_S0_reg <= I_reg[10:8];
 			mask_L_reg <= 3'h0;
@@ -485,7 +495,6 @@ begin
 			else
 				SC_reg <= 1'b0;
 			n_LB_w_reg <= I_reg[11];
-			//if((I_reg[12:11] != 2'b00) || (I_reg[10:8] == 3'h7))
 			if(I_reg[12] || (I_reg[10:8] == 3'h7))
 				latch_wren_reg <= 1'b1;
 			else
@@ -501,8 +510,13 @@ begin
 			n_LB_r_reg <= I_reg[11];
 			JMP <= 1'b1;
 			
-			rotate_mux_reg <= 1'b1;
-			rotate_source_reg <= I_reg[12];
+			//rotate_mux_reg <= 1'b1;
+			case(I_reg[11])
+			1'b0: rotate_mux_reg <= 1'b0;
+			1'b1: rotate_mux_reg <= ~I_reg[8];
+			endcase
+			rotate_source_reg <= 1'b1;
+			RC_reg <= 1'b0;
 			rotate_R_reg <= 3'b000;
 			rotate_S0_reg <= I_reg[10:8];
 			
@@ -539,7 +553,8 @@ begin
 end
 assign SC = SC_reg;
 assign WC = WC_reg;
-assign RC = (~rotate_mux_reg) & rotate_source_reg;
+//assign RC = (~rotate_mux_reg) & rotate_source_reg;
+assign RC = RC_reg;
 assign n_LB_w = n_LB_w_reg;
 assign n_LB_r = n_LB_r_reg;
 assign rotate_S0 = rotate_S0_reg;

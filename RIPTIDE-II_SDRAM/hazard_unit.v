@@ -15,6 +15,7 @@ module hazard_unit(
 		input wire regf_wren_reg1, regf_wren_reg2, regf_wren_reg3, regf_wren_reg4, regf_wren_reg5,
 		input wire SC_reg1, SC_reg2, SC_reg3, SC_reg4, SC_reg5, SC_reg6, SC_reg7,
 		input wire WC_reg1, WC_reg2, WC_reg3, WC_reg4, WC_reg5, WC_reg6, WC_reg7,
+		input wire RC_reg,
 		input wire n_LB_w_reg1, n_LB_w_reg2, n_LB_w_reg3, n_LB_w_reg4, n_LB_w_reg5, n_LB_w_reg6, n_LB_w_reg7,
 		input wire n_LB_r,
 		input wire rotate_mux,
@@ -59,14 +60,22 @@ assign regf_hazard2 = regf_wren_reg2 & (~rotate_mux) & (~rotate_source) & (regf_
 assign regf_hazard3 = regf_wren_reg3 & (~rotate_mux) & (~rotate_source) & (regf_a_read == regf_w_reg3);
 assign regf_hazard4 = regf_wren_reg4 & (~rotate_mux) & (~rotate_source) & (regf_a_read == regf_w_reg4);
 assign regf_hazard5 = regf_wren_reg5 & (~rotate_mux) & (~rotate_source) & (regf_a_read == regf_w_reg5);
-assign IO_hazard1 = (~rotate_mux) & rotate_source & (SC_reg1 | (WC_reg1 & (n_LB_w_reg1 == n_LB_r)));
-assign IO_hazard2 = (~rotate_mux) & rotate_source & (SC_reg2 | (WC_reg2 & (n_LB_w_reg2 == n_LB_r)));
-assign IO_hazard3 = (~rotate_mux) & rotate_source & (SC_reg3 | (WC_reg3 & (n_LB_w_reg3 == n_LB_r)));
-assign IO_hazard4 = (~rotate_mux) & rotate_source & (SC_reg4 | (WC_reg4 & (n_LB_w_reg4 == n_LB_r)));
-assign IO_hazard5 = (~rotate_mux) & rotate_source & (SC_reg5 | (WC_reg5 & (n_LB_w_reg5 == n_LB_r)));
-assign IO_hazard6 = (~rotate_mux) & rotate_source & (SC_reg6 | (WC_reg6 & (n_LB_w_reg6 == n_LB_r)));
-assign IO_hazard7 = (~rotate_mux) & rotate_source & (SC_reg7 | (WC_reg7 & (n_LB_w_reg7 == n_LB_r)));
-assign IO_hazard_read_miss = (~rotate_mux) & rotate_source & d_cache_miss;
+//assign IO_hazard1 = (~rotate_mux) & rotate_source & (SC_reg1 | (WC_reg1 & (n_LB_w_reg1 == n_LB_r)));
+//assign IO_hazard2 = (~rotate_mux) & rotate_source & (SC_reg2 | (WC_reg2 & (n_LB_w_reg2 == n_LB_r)));
+//assign IO_hazard3 = (~rotate_mux) & rotate_source & (SC_reg3 | (WC_reg3 & (n_LB_w_reg3 == n_LB_r)));
+//assign IO_hazard4 = (~rotate_mux) & rotate_source & (SC_reg4 | (WC_reg4 & (n_LB_w_reg4 == n_LB_r)));
+//assign IO_hazard5 = (~rotate_mux) & rotate_source & (SC_reg5 | (WC_reg5 & (n_LB_w_reg5 == n_LB_r)));
+//assign IO_hazard6 = (~rotate_mux) & rotate_source & (SC_reg6 | (WC_reg6 & (n_LB_w_reg6 == n_LB_r)));
+//assign IO_hazard7 = (~rotate_mux) & rotate_source & (SC_reg7 | (WC_reg7 & (n_LB_w_reg7 == n_LB_r)));
+//assign IO_hazard_read_miss = (~rotate_mux) & rotate_source & d_cache_miss;
+assign IO_hazard1 = RC_reg & (SC_reg1 | (WC_reg1 & (n_LB_w_reg1 == n_LB_r)));
+assign IO_hazard2 = RC_reg & (SC_reg2 | (WC_reg2 & (n_LB_w_reg2 == n_LB_r)));
+assign IO_hazard3 = RC_reg & (SC_reg3 | (WC_reg3 & (n_LB_w_reg3 == n_LB_r)));
+assign IO_hazard4 = RC_reg & (SC_reg4 | (WC_reg4 & (n_LB_w_reg4 == n_LB_r)));
+assign IO_hazard5 = RC_reg & (SC_reg5 | (WC_reg5 & (n_LB_w_reg5 == n_LB_r)));
+assign IO_hazard6 = RC_reg & (SC_reg6 | (WC_reg6 & (n_LB_w_reg6 == n_LB_r)));
+assign IO_hazard7 = RC_reg & (SC_reg7 | (WC_reg7 & (n_LB_w_reg7 == n_LB_r)));
+assign IO_hazard_read_miss = RC_reg & d_cache_miss;
 assign IO_hazard_write_miss = d_cache_miss & WC_reg6;
 assign aux_hazard = aux_read & regf_wren_reg1 & (regf_w_reg1 == 3'h0);
 assign OVF_hazard = OVF_hazard1 | OVF_hazard2;

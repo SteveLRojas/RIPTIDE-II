@@ -93,10 +93,34 @@ module PVP(
 // RS-232 module address map
 // 0 data register
 // 1 status register
+//		bit 0: TX overwrite
+//		bit 1: RX overwrite
+//		bit 2: TX ready
+//		bit 3: RX ready
+//		bit 4: TX queue empty
+//		bit 5: RX queue full
 
 // Keyboard module memory map
 // 0 data register
 // 1 status register
+//		bit 0: TX overwrite
+//		bit 1: RX overwrite
+//		bit 2: TX ready
+//		bit 3: RX ready
+//		bit 4: TX queue empty
+//		bit 5: RX queue full
+
+// Timer module address map
+// 0 counter bits 7:0
+// 1 counter bits 15:8
+// 2 counter bits 23:16
+// 3 status
+//		bit 0: counter 7:0 not zero
+//		bit 1: counter 15:8 not zero
+//		bit 2: counter 23:16 not zero
+//		bit 3: counter 23:0 not zero
+//		bit 4: VSYNC
+//		bit 5: HSYNC
 
 //####### PLL #################################################################
 wire clk_25;
@@ -309,7 +333,7 @@ assign timer_en = (&data_address[15:4]) & ~data_address[3] & ~data_address[2];
 timer timer_inst(
 		.clk(clk_sys),
 		.rst(rst),
-		.ce(serial_en),
+		.ce(timer_en),
 		.wren(IO_wren),
 		.ren(IO_ren),
 		.hsync(HSYNC),

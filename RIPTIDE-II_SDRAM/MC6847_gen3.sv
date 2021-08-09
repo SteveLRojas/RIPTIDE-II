@@ -136,7 +136,15 @@ begin
 	if(active_area)
 	begin
 		next_col_count = col_count + 8'h01;
-		if(col_count == 8'd255)
+		next_cell_line = cell_line;
+		next_cell_count = cell_count;
+		next_row_count = row_count;
+		next_vert_scaler = vert_scaler;
+	end
+	else if(active_rows)
+	begin
+		next_col_count = col_count;
+		if(active_area_s)
 		begin
 			if(vert_scaler == 3'b100)
 				next_vert_scaler = 3'b000;
@@ -174,22 +182,13 @@ begin
 			next_vert_scaler = vert_scaler;
 		end
 	end
-	else if(active_rows)
+	else
 	begin
 		next_col_count = 8'h07;	// col_count must be maintained 7 counts ahead of the actual column value.
 // this will cause the 3 LSBs of col_count to roll over at the start of each cell, so the right data is latched but the address points to the next cell.
-		next_cell_line = cell_line;
-		next_cell_count = cell_count;
-		next_row_count = row_count;
-		next_vert_scaler = vert_scaler;
-	end
-	else
-	begin
 		next_cell_line = 0;
-		next_col_count = 0;
-		next_row_count = 0;
-		next_col_count = 8'h07;
 		next_cell_count = 0;
+		next_row_count = 0;
 		next_vert_scaler = 0;
 	end
 //memory address logic
@@ -281,8 +280,8 @@ begin
 			B4 = 0;
 		end
 	endcase
-	H4 = (cell_line[2]&cell_line[1])|cell_line[3];
-	E4 = (DD_s[0]&col_count[2]&H4)|(DD_s[1]&(~col_count[2])&H4)|(DD_s[2]&col_count[2]&(~H4))|(DD_s[3]&(~col_count[2])&(~H4));
+	H4 = (cell_line[2] & cell_line[1]) | cell_line[3];
+	E4 = (DD_s[0] & col_count[2] & H4) | (DD_s[1] & (~col_count[2]) & H4) | (DD_s[2] & col_count[2] & (~H4)) | (DD_s[3] & (~col_count[2]) & (~H4));
 	
 	unique case(col_count[2:1])
 	2'b00: pair=DD_s[7:6];
