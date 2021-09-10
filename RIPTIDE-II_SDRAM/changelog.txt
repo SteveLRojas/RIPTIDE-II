@@ -159,3 +159,15 @@ Found bug in decoder (incorrect RC output for instruction 78 20	XOR	RIV0 1 R0).
 	Modified hazard unit to use the RC signal instead of inferring it from rotate_source and rotate_mux.
 Fixed performance issue in decoder (XMIT and JMP set rotate_source to avoid regf hazards).
 Fixed bug in MC6847_gen3 (vertical counters increment at start of horizontal blank and not when col_count overflows).
+
+Revision 10:
+Found possible bug: latch_address_r_reg is driven by I_reg[4:3]. It should be I_reg[12:11]?
+	Not a bug, but latch address_r_reg is always the same as latch_address_w_reg and is therefore not needed.
+	Removed latch_addres_r and latch_address_r_reg from decoder.
+	Removed latch_address_r and related signals from RIPTIDE-III module.
+Found performance issue: Hazard unit seems to have unnecessary regf_hazard (regf_hazard5).
+	Removed regf_hazard5 and related signals.
+Found performance issue: Hazard unit has unnecessary IO_hazard (IO_hazard7).
+	Removed IO_hazard7 and related signals.
+Set correct input/output delays in SDC file.
+Set false paths in SDC fille.

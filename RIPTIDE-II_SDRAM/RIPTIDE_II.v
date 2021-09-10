@@ -18,15 +18,15 @@ module RIPTIDE_II(
 reg RST, RST_hold;
 reg HALT;
 reg[7:0] IV_in;
-reg SC1, SC2, SC3, SC4, SC5, SC6, SC7;
-reg WC1, WC2, WC3, WC4, WC5, WC6, WC7;
-reg n_LB_w1, n_LB_w2, n_LB_w3, n_LB_w4, n_LB_w5, n_LB_w6, n_LB_w7;
+reg SC1, SC2, SC3, SC4, SC5, SC6;//, SC7;
+reg WC1, WC2, WC3, WC4, WC5, WC6;//, WC7;
+reg n_LB_w1, n_LB_w2, n_LB_w3, n_LB_w4, n_LB_w5, n_LB_w6;//, n_LB_w7;
 reg latch_wren1, latch_wren2, latch_wren3, latch_wren4, latch_wren5;
 reg[1:0] latch_address_w1, latch_address_w2, latch_address_w3, latch_address_w4, latch_address_w5;
-reg[1:0] latch_address_r1, latch_address_r2, latch_address_r3, latch_address_r4;
+//reg[1:0] latch_address_r1, latch_address_r2, latch_address_r3, latch_address_r4;
 wire[2:0] regf_a;
-reg[2:0] regf_w1, regf_w2, regf_w3, regf_w4, regf_w5;
-reg regf_wren1, regf_wren2, regf_wren3, regf_wren4, regf_wren5;
+reg[2:0] regf_w1, regf_w2, regf_w3, regf_w4;//, regf_w5;
+reg regf_wren1, regf_wren2, regf_wren3, regf_wren4;//, regf_wren5;
 wire[7:0] a_data, b_data;
 wire[7:0] rotate_out;
 reg[2:0] rotate_S01, rotate_R1;
@@ -61,7 +61,7 @@ wire rotate_source;
 wire rotate_mux;
 wire latch_wren;
 wire[1:0] latch_address_w;
-wire[1:0] latch_address_r;
+//wire[1:0] latch_address_r;
 wire[2:0] regf_w;
 wire regf_wren;
 reg NZT1, NZT2, NZT3, NZT4;
@@ -85,7 +85,8 @@ wire pipeline_flush;
 
 assign IO_WC = WC6;
 //no IO read during IO hazard to prevent false cache misses (Assuming all IO registers are read only or write only or cached).
-assign IO_RC = RC & ~(SC1 | SC2 | SC3 | SC4 | SC5 | SC6 | SC7);
+//assign IO_RC = RC & ~(SC1 | SC2 | SC3 | SC4 | SC5 | SC6 | SC7);
+assign IO_RC = RC & ~(SC1 | SC2 | SC3 | SC4 | SC5 | SC6);
 assign IO_n_LB_w = n_LB_w6;
 assign IO_n_LB_r = n_LB_r;
 
@@ -311,28 +312,28 @@ begin
 		long_I3 <= long_I2;
 		long_I4 <= long_I3;
 		latch_address_w1 <= latch_address_w;
-		latch_address_r1 <= latch_address_r;
+		//latch_address_r1 <= latch_address_r;
 		latch_address_w2 <= latch_address_w1;
 		latch_address_w3 <= latch_address_w2;
 		latch_address_w4 <= latch_address_w3;
-		latch_address_r2 <= latch_address_r1;
-		latch_address_r3 <= latch_address_r2;
-		latch_address_r4 <= latch_address_r3;
+		//latch_address_r2 <= latch_address_r1;
+		//latch_address_r3 <= latch_address_r2;
+		//latch_address_r4 <= latch_address_r3;
 		SC5 <= SC4;
 		SC6 <= SC5;
-		SC7 <= SC6;
+		//SC7 <= SC6;
 		
 		n_LB_w5 <= n_LB_w4;
 		n_LB_w6 <= n_LB_w5;
-		n_LB_w7 <= n_LB_w6;
+		//n_LB_w7 <= n_LB_w6;
 		latch_wren5 <= latch_wren4;
 		latch_address_w5 <= latch_address_w4;
 		regf_w1 <= regf_w;
 		regf_w2 <= regf_w1;
 		regf_w3 <= regf_w2;
 		regf_w4 <= regf_w3;
-		regf_w5 <= regf_w4;
-		regf_wren5 <= regf_wren4;
+		//regf_w5 <= regf_w4;
+		//regf_wren5 <= regf_wren4;
 		merge_D05 <= merge_D04;
 		PC_I_field1 <= PC_I_field[7:0];
 		PC_I_field2 <= PC_I_field1;
@@ -347,13 +348,13 @@ begin
 	begin
 		WC5 <= 1'b0;
 		WC6 <= 1'b0;
-		WC7 <= 1'b0;
+		//WC7 <= 1'b0;
 	end
 	else if(~data_hazard)
 	begin
 		WC5 <= WC4;
 		WC6 <= WC5;
-		WC7 <= WC6;
+		//WC7 <= WC6;
 	end
 end
 
@@ -404,7 +405,8 @@ shift_merge shift_merge0(
 		.L_select(shift_L4),
 		.latch_wren(latch_wren5),
 		.latch_address_w(latch_address_w5),
-		.latch_address_r(latch_address_r4),
+		//.latch_address_r(latch_address_r4),
+		.latch_address_r(latch_address_w4),
 		.address(address),
 		.data_out(data_out));
 		
@@ -451,7 +453,7 @@ decode_unit decode_unit0(
 		.alu_I_field(alu_I_field),
 		.latch_wren(latch_wren),
 		.latch_address_w(latch_address_w),
-		.latch_address_r(latch_address_r),
+		//.latch_address_r(latch_address_r),
 		.merge_D0(merge_D0),
 		.shift_L(shift_L),
 		.regf_a(regf_a),
@@ -481,18 +483,19 @@ hazard_unit hazard_unit0(
 		.HALT(HALT),
 		.RST(RST),
 		.regf_a_read(regf_a),
-		.regf_w_reg1(regf_w1), .regf_w_reg2(regf_w2), .regf_w_reg3(regf_w3), .regf_w_reg4(regf_w4), .regf_w_reg5(regf_w5),
-		.regf_wren_reg1(regf_wren1), .regf_wren_reg2(regf_wren2), .regf_wren_reg3(regf_wren3), .regf_wren_reg4(regf_wren4), .regf_wren_reg5(regf_wren5),
-		.SC_reg1(SC1), .SC_reg2(SC2), .SC_reg3(SC3), .SC_reg4(SC4), .SC_reg5(SC5), .SC_reg6(SC6), .SC_reg7(SC7),
-		.WC_reg1(WC1), .WC_reg2(WC2), .WC_reg3(WC3), .WC_reg4(WC4), .WC_reg5(WC5), .WC_reg6(WC6), .WC_reg7(WC7),
+		.regf_w_reg1(regf_w1), .regf_w_reg2(regf_w2), .regf_w_reg3(regf_w3), .regf_w_reg4(regf_w4),// .regf_w_reg5(regf_w5),
+		.regf_wren_reg1(regf_wren1), .regf_wren_reg2(regf_wren2), .regf_wren_reg3(regf_wren3), .regf_wren_reg4(regf_wren4),// .regf_wren_reg5(regf_wren5),
+		.SC_reg1(SC1), .SC_reg2(SC2), .SC_reg3(SC3), .SC_reg4(SC4), .SC_reg5(SC5), .SC_reg6(SC6),// .SC_reg7(SC7),
+		.WC_reg1(WC1), .WC_reg2(WC2), .WC_reg3(WC3), .WC_reg4(WC4), .WC_reg5(WC5), .WC_reg6(WC6),// .WC_reg7(WC7),
 		.RC_reg(RC),
-		.n_LB_w_reg1(n_LB_w1), .n_LB_w_reg2(n_LB_w2), .n_LB_w_reg3(n_LB_w3), .n_LB_w_reg4(n_LB_w4), .n_LB_w_reg5(n_LB_w5), .n_LB_w_reg6(n_LB_w6), .n_LB_w_reg7(n_LB_w7),
+		.n_LB_w_reg1(n_LB_w1), .n_LB_w_reg2(n_LB_w2), .n_LB_w_reg3(n_LB_w3), .n_LB_w_reg4(n_LB_w4), .n_LB_w_reg5(n_LB_w5), .n_LB_w_reg6(n_LB_w6),// .n_LB_w_reg7(n_LB_w7),
 		.n_LB_r(n_LB_r),
 		.rotate_mux(rotate_mux),
 		.rotate_source(rotate_source),
 		.latch_wren(latch_wren), .latch_wren1(latch_wren1),
 		.latch_address_w1(latch_address_w1),
-		.latch_address_r(latch_address_r),
+		//.latch_address_r(latch_address_r),
+		.latch_address_r(latch_address_w),
 		.shift_L(shift_L),
 		.d_cache_miss(d_cache_miss),
 		.hazard(hazard),

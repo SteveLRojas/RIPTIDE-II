@@ -19,7 +19,7 @@ module decode_unit(
 		output wire[7:0] alu_I_field,
 		output wire latch_wren,
 		output wire[1:0] latch_address_w,
-		output wire[1:0] latch_address_r,
+		//output wire[1:0] latch_address_r,
 		output wire[2:0] merge_D0,
 		output wire[2:0] shift_L,
 		output wire[2:0] regf_a,
@@ -57,7 +57,7 @@ reg alu_mux_reg;
 reg[7:0] alu_I_field_reg;
 reg latch_wren_reg;
 reg[1:0] latch_address_w_reg;
-reg[1:0] latch_address_r_reg;
+//reg[1:0] latch_address_r_reg;
 reg[2:0] merge_D0_reg;
 reg[2:0] shift_L_reg;
 reg[2:0] regf_a_reg, regf_w_reg;
@@ -160,7 +160,7 @@ begin
 				regf_wren_reg <= ((I_reg[7:5] != 3'h0) | (I_reg[12:8] != I_reg[4:0]));	//prevent NOP from triggering hazard detection
 			else
 				regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= 1'b0;
 			XEC <= 1'b0;
 			CALL <= 1'b0;
@@ -218,7 +218,7 @@ begin
 				regf_wren_reg <= 1'b1;
 			else
 				regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= 1'b0;
 			XEC <= 1'b0;
 			CALL <= 1'b0;
@@ -276,7 +276,7 @@ begin
 				regf_wren_reg <= 1'b1;
 			else
 				regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= 1'b0;
 			XEC <= 1'b0;
 			CALL <= 1'b0;
@@ -334,7 +334,7 @@ begin
 				regf_wren_reg <= 1'b1;
 			else
 				regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= 1'b0;
 			XEC <= 1'b0;
 			CALL <= 1'b0;
@@ -386,7 +386,7 @@ begin
 			1'b1: regf_w_reg <= 3'h7;
 			endcase
 			regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= 1'b0;
 			XEC <= 1'b1;
 			CALL <= 1'b0;
@@ -432,7 +432,7 @@ begin
 			1'b1: regf_w_reg <= 3'h7;
 			endcase
 			regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= ~((~I_reg[12]) & (I_reg[11]) & (&I_reg[10:8]));	//no NZT for return instructions
 			XEC <= 1'b0;
 			CALL <= (~I_reg[12]) & (~I_reg[11]) & (&I_reg[10:8]);
@@ -482,7 +482,7 @@ begin
 				regf_wren_reg <= 1'b1;
 			else
 				regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[12:11];
+			//latch_address_r_reg <= I_reg[12:11];
 			NZT <= 1'b0;
 			XEC <= 1'b0;
 			CALL <= 1'b0;
@@ -535,7 +535,7 @@ begin
 			1'b1: regf_w_reg <= 3'h7;
 			endcase
 			regf_wren_reg <= 1'b0;
-			latch_address_r_reg <= I_reg[4:3];
+			//latch_address_r_reg <= I_reg[4:3];
 			NZT <= 1'b0;
 			XEC <= 1'b0;
 			CALL <= 1'b0;
@@ -567,7 +567,7 @@ assign alu_mux = alu_mux_reg;
 assign alu_I_field = alu_I_field_reg;
 assign latch_wren = latch_wren_reg;
 assign latch_address_w = latch_address_w_reg;
-assign latch_address_r = latch_address_r_reg;
+//assign latch_address_r = latch_address_r_reg;
 assign merge_D0 = merge_D0_reg;
 assign shift_L = shift_L_reg;
 assign regf_a = regf_a_reg;
