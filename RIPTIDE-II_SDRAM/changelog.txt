@@ -164,7 +164,7 @@ Revision 10:
 Found possible bug: latch_address_r_reg is driven by I_reg[4:3]. It should be I_reg[12:11]?
 	Not a bug, but latch address_r_reg is always the same as latch_address_w_reg and is therefore not needed.
 	Removed latch_addres_r and latch_address_r_reg from decoder.
-	Removed latch_address_r and related signals from RIPTIDE-III module.
+	Removed latch_address_r and related signals from RIPTIDE-II module.
 Found performance issue: Hazard unit seems to have unnecessary regf_hazard (regf_hazard5).
 	Removed regf_hazard5 and related signals.
 Found performance issue: Hazard unit has unnecessary IO_hazard (IO_hazard7).
